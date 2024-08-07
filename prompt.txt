@@ -1,0 +1,11 @@
+For generating (title, labels) pair to create random pie charts
+Prompt:
+    '''
+    In [Chinese/English], can you generate 200 title for pie chart and corresponding labels in a jsonl file?
+    please use utf-8 encoding
+    {"title": "", "labels": ["", "", "", ...]}
+    '''
+Response:
+    {"title": "Education level Distribution", "labels": ["High School", "Undergraduate", "Graduate"]}
+    ...
+
