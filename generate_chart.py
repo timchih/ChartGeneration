@@ -15,6 +15,7 @@ def generateRandomFileName(chartType, i, output_path):
     return os.path.join(output_path, output_file_name)
 
 def generate_pie(chartType, output_path, is_random, f_gt, img_count=None, dict_path=None):
+    # TODO: create Pie in this function
     if is_random:
         for i in range(img_count):
             output_full_path = gh.randomFileName(chartType, i, output_path)
@@ -51,8 +52,8 @@ def generate_chart(chartType, output_path, is_random, img_count=None, dict_path=
 
     f_gt.close()
 
-# chartType = "Pie"
-# output_path = 'output/pie/'
+# TODO: argument parsing
+# TODO: main
             
 # pie = Pie("dict/ch_news.txt", "dict/en_corpus.txt", 3, 8, 'output/pie/' + output_file_name)
 pie = Pie(language='ch')

@@ -40,6 +40,8 @@ class Bar:
         category = cate_labels[0]
         values = values[0]
 
+        # TODO: rand bar from dict
+        # TODO: abstracted random function(e.g. color...)
         # Create a bar chart
         plt.figure(figsize=(10, 5))
         plt.bar(bar_labels, values, color='blue') #? color
@@ -75,6 +77,8 @@ class Bar:
             ax.bar(bar_labels, values[i], label=subcat, bottom=bottom)
             bottom += values[i]
 
+        # TODO: rand bar from dict
+        # TODO: abstracted random function(e.g. color...)
         # display categories as legends
         ax.legend()
         # Adding title and labels
@@ -97,9 +101,11 @@ class Bar:
         return result_dict
 
     def randGroupBar(self, output_file_name):
+        # TODO: write code for group bar generation
         pass
 
     def randLabelList(self, count):
+        # TODO: move this function to gh
         return [gh.generate_label(self.language, self.min_txt_len, self.max_txt_len, self.ch, self.en) for i in range(count)]
     
     def barToMarkdown(self, data):
