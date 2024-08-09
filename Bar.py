@@ -35,7 +35,7 @@ class Bar:
 
     def randBar(self, output_file_name):
         # Generate random data
-        _, _, bar_labels, cate_labels, values, title, xlabel, ylabel = self.randData()
+        _, _, bar_labels, cate_labels, values, title, xlabel, ylabel = self.generateData()
         # ! only for simple bar chart
         category = cate_labels[0]
         values = values[0]
@@ -55,14 +55,14 @@ class Bar:
         # plt.savefig(output_file_name + '.png')
 
         # create info dict from data
-        result_dict = self.generateResult(title, xlabel, ylabel, output_file_name, {category: dict(zip(bar_labels, values))}, 'stacked bar')
+        result_dict = self.generateResult(title, xlabel, ylabel, output_file_name, {category: dict(zip(bar_labels, values))}, 'simple bar')
         # print(result_dict['markdown'])
         return result_dict
         
 
     def randStackBar(self, output_file_name):
         # Generate random data
-        num_bars, num_categories, bar_labels, cate_labels, values, title, xlabel, ylabel = self.randData()
+        num_bars, num_categories, bar_labels, cate_labels, values, title, xlabel, ylabel = self.generateData()
 
         # Create the stacked bar chart
         _, ax = plt.subplots()
@@ -131,7 +131,7 @@ class Bar:
         result_dict = {'image': output_file_name + '.png', 'json' : json_dict, 'markdown' : self.barToMarkdown(json_dict), 'type': typeBar, 'source': 'Tim'}
         return result_dict
     
-    def randData(self):
+    def generateData(self):
         num_bars = np.random.randint(self.min_bars, self.max_bars)
         num_categories = np.random.randint(self.min_categories, self.max_categories)
         bar_labels = self.randLabelList(num_bars)

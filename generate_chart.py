@@ -45,5 +45,5 @@ def generate_chart_from_dict(dict_path, chartType, output_path):
 # pie = Pie("dict/ch_news.txt", "dict/en_corpus.txt", 3, 8, 'output/pie/' + output_file_name)
 pie = Pie(language='ch')
 
-generate_chart_random(4, 'pie', 'output/pie/')
-# generate_chart_from_dict('dict/test.jsonl', 'pie', 'output/pie/')
+# generate_chart_random(4, 'pie', 'output/pie/')
+generate_chart_from_dict('dict/test.jsonl', 'pie', 'output/pie/')

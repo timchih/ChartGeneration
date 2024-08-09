@@ -2,6 +2,9 @@ import matplotlib.pyplot as plt
 import numpy as np
 import generation_helper as gh
 
+from pylab import mpl
+# a font that includes chinese letters
+mpl.rcParams["font.sans-serif"] = ["SimHei"]
 class Pie:
     def __init__(self, 
                  ch_dict_path="dict/ch_news.txt",
@@ -22,27 +25,18 @@ class Pie:
         self.max_txt_len = max_txt_len
         self.is_random = is_random
 
-
-    def randPie(self, output_file_name):
+    def randPie(self, output_file_name, is_show=False):
         # TODO: extract assignment(e.g. assign color, draw pie)
         # TODO: combine randPie and pieFromDict
-        # ? create random variables
-        num_slices = np.random.randint(self.min_slice, self.max_slice)
-        sizes = np.random.rand(num_slices)
-        sizes = sizes / sizes.sum()
+        # generate random data
+        num_slices, sizes, labels, title = self.generateData()
 
+        # generate random bool/color
         rand_bools = gh.random_bool(4)
         colors = plt.cm.viridis(np.linspace(0,1,num_slices))
-        rand_colors = [gh.randomcolor() for i in range(2)]
+        rand_colors = [gh.randomcolor() for _ in range(2)]
         
-        if rand_bools[0]:
-            # ? 1. random word label
-            labels = [gh.generate_label(self.language, self.min_txt_len, self.max_txt_len, self.ch, self.en) for i in range(num_slices)]
-        else:
-            # ? 2. simple label Slice<number>
-            labels = [f'Slice {i+1}' for i in range(num_slices)]
-        
-        fig1, ax1 = plt.subplots()
+        _, ax1 = plt.subplots()
         size_display = [f"{size*100:{2}.{1}f}%" for size in sizes]
 
         # ? randomly generate pie chart
@@ -61,24 +55,19 @@ class Pie:
         
         ax1.axis('equal')
 
-        # ? generate title
-        title = gh.generate_label(self.language, self.min_txt_len, self.max_txt_len, self.ch, self.en)
         plt.title(title, fontweight='bold', color=rand_colors[1])
+        plt.tight_layout()
         
-        plt.savefig(output_file_name + '.png')
+        # show/save pie chart
+        self.showOrSave(output_file_name, is_show)
 
-        # TODO: extract helper
-        json_dict = {'title': title, 'x_title': 'None', 'y_title': 'None', 'values': dict(zip(labels, size_display))}
-        result_dict = {'image': output_file_name + '.png', 'json' : json_dict, 'markdown' : self.pieToMarkdown(json_dict), 'type': 'pie', 'source': 'Tim'}
+        # generate result json
+        result_dict = self.generateResult(title, dict(zip(labels, size_display)), output_file_name)
         return result_dict
     
-    def pieFromDict(self, output_file_name, data):
-        title = data["title"]
-        labels = list(data["labels"])
-        num_slices = len(labels)
-
-        sizes = np.random.rand(num_slices)
-        sizes = sizes / sizes.sum()
+    def pieFromDict(self, output_file_name, data, is_show=False):
+        self.is_random = False # !!!!!! emmm 
+        num_slices, sizes, labels, title = self.generateData(data=data)
 
         rand_bools = gh.random_bool(4)
         colors = plt.cm.viridis(np.linspace(0,1,num_slices))
@@ -105,12 +94,35 @@ class Pie:
 
         # ? generate title
         plt.title(title, fontweight='bold', color=rand_colors[1])
+        plt.tight_layout()
         
-        plt.savefig(output_file_name + '.png')
+        # show/save pie chart
+        self.showOrSave(output_file_name, is_show)
 
-        json_dict = {'title': title, 'x_title': 'None', 'y_title': 'None', 'values': dict(zip(labels, size_display))}
+        # generate result json
+        result_dict = self.generateResult(title, dict(zip(labels, size_display)), output_file_name)
+        return result_dict
+    
+    def generateResult(self, title, values, output_file_name):
+        json_dict = {'title': title, 'x_title': 'None', 'y_title': 'None', 'values': values}
         result_dict = {'image': output_file_name + '.png', 'json' : json_dict, 'markdown' : self.pieToMarkdown(json_dict), 'type': 'pie', 'source': 'Tim'}
         return result_dict
+
+    def generateData(self, data=None):
+        if self.is_random:
+            num_slices = np.random.randint(self.min_slice, self.max_slice)
+            labels = [gh.generate_label(self.language, self.min_txt_len, self.max_txt_len, self.ch, self.en) for i in range(num_slices)]
+            title = gh.generate_label(self.language, self.min_txt_len, self.max_txt_len, self.ch, self.en)
+        else:
+            labels = list(data["labels"])
+            title = data["title"]
+            num_slices = len(labels)
+            
+        sizes = np.random.rand(num_slices)
+        sizes = sizes / sizes.sum()
+
+
+        return num_slices, sizes, labels, title
     
     def pieToMarkdown(self, data):
         markdown_table = f"# {data['title']}\n\n"
@@ -121,3 +133,13 @@ class Pie:
             markdown_table += f"| {slice_name} | {slice_value} |\n"
 
         return markdown_table
+
+    def showOrSave(self, output_file_name, is_show):
+        if is_show:
+            plt.show()
+        else:
+            plt.savefig(output_file_name + '.png')
+
+if __name__ == "__main__":
+    pie = Pie(language='ch')
+    pie.randPie('something', True)
