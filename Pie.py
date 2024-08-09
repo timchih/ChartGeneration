@@ -6,24 +6,28 @@ class Pie:
     def __init__(self, 
                  ch_dict_path="dict/ch_news.txt",
                  en_dict_path="dict/en_corpus.txt",
-                 minSlice=3,
-                 maxSlice=8,
-                 language = 'en',
-                 min_txt_len = 5,
-                 max_txt_len = 12
+                 min_slice=3,
+                 max_slice=8,
+                 language='en',
+                 min_txt_len=5,
+                 max_txt_len=12,
+                 is_random=True,
                  ):
         self.ch = gh.load_courp(ch_dict_path, '')
         self.en = gh.load_courp(en_dict_path, '')
-        self.minSlice = minSlice
-        self.maxSlice = maxSlice
+        self.min_slice = min_slice
+        self.max_slice = max_slice
         self.language = language
         self.min_txt_len = min_txt_len
         self.max_txt_len = max_txt_len
+        self.is_random = is_random
 
 
     def randPie(self, output_file_name):
+        # TODO: extract assignment(e.g. assign color, draw pie)
+        # TODO: combine randPie and pieFromDict
         # ? create random variables
-        num_slices = np.random.randint(self.minSlice, self.maxSlice)
+        num_slices = np.random.randint(self.min_slice, self.max_slice)
         sizes = np.random.rand(num_slices)
         sizes = sizes / sizes.sum()
 
@@ -63,8 +67,9 @@ class Pie:
         
         plt.savefig(output_file_name + '.png')
 
+        # TODO: extract helper
         json_dict = {'title': title, 'x_title': 'None', 'y_title': 'None', 'values': dict(zip(labels, size_display))}
-        result_dict = {'image': output_file_name + '.png', 'json' : json_dict, 'markdown' : gh.dict_to_markdown(json_dict)}
+        result_dict = {'image': output_file_name + '.png', 'json' : json_dict, 'markdown' : self.pieToMarkdown(json_dict), 'type': 'pie', 'source': 'Tim'}
         return result_dict
     
     def pieFromDict(self, output_file_name, data):
@@ -104,5 +109,15 @@ class Pie:
         plt.savefig(output_file_name + '.png')
 
         json_dict = {'title': title, 'x_title': 'None', 'y_title': 'None', 'values': dict(zip(labels, size_display))}
-        result_dict = {'image': output_file_name + '.png', 'json' : json_dict, 'markdown' : gh.dict_to_markdown(json_dict), 'source': 'Tim'}
+        result_dict = {'image': output_file_name + '.png', 'json' : json_dict, 'markdown' : self.pieToMarkdown(json_dict), 'type': 'pie', 'source': 'Tim'}
         return result_dict
+    
+    def pieToMarkdown(self, data):
+        markdown_table = f"# {data['title']}\n\n"
+        markdown_table += "| Slice | Value |\n"
+        markdown_table += "| --- | --- |\n"
+
+        for slice_name, slice_value in data['values'].items():
+            markdown_table += f"| {slice_name} | {slice_value} |\n"
+
+        return markdown_table

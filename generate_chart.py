@@ -10,12 +10,6 @@ from pylab import mpl
 # a font that includes chinese letters
 mpl.rcParams["font.sans-serif"] = ["SimHei"]
 
-# chartType = "Pie"
-# output_path = 'output/pie/'
-            
-# pie = Pie("dict/ch_news.txt", "dict/en_corpus.txt", 3, 8, 'output/pie/' + output_file_name)
-pie = Pie(language='ch')
-
 def generate_chart_random(img_count, chartType, output_path):
     f_gt = open(os.path.join(output_path, "gt.jsonl"), encoding="utf-8", mode="w")
 
@@ -45,6 +39,11 @@ def generate_chart_from_dict(dict_path, chartType, output_path):
 
     f_gt.close()
 
+# chartType = "Pie"
+# output_path = 'output/pie/'
+            
+# pie = Pie("dict/ch_news.txt", "dict/en_corpus.txt", 3, 8, 'output/pie/' + output_file_name)
+pie = Pie(language='ch')
 
-# generate_chart_random(4, 'pie', 'output/pie/')
-generate_chart_from_dict('dict/pie_words.jsonl', 'pie', 'output/pie/')
+generate_chart_random(4, 'pie', 'output/pie/')
+# generate_chart_from_dict('dict/test.jsonl', 'pie', 'output/pie/')

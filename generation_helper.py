@@ -38,13 +38,3 @@ def randomcolor():
 def randomFileName(chartType, it):
     output_file_name = "".join(random.choices(string.ascii_uppercase + string.digits, k=20))
     return "{}_{}_{}".format(chartType, it, output_file_name)
-
-def dict_to_markdown(data):
-    markdown_table = f"# {data['title']}\n\n"
-    markdown_table += "| Slice | Value |\n"
-    markdown_table += "| --- | --- |\n"
-
-    for slice_name, slice_value in data['values'].items():
-        markdown_table += f"| {slice_name} | {slice_value} |\n"
-
-    return markdown_table

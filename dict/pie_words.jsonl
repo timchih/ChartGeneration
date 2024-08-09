@@ -302,3 +302,344 @@
 {"title": "中国主要城市空气质量指数", "labels": ["北京", "上海", "广州", "深圳", "成都", "重庆"]}
 {"title": "全球主要电影票房收入", "labels": ["北美", "中国", "日本", "英国", "印度", "德国"]}
 {"title": "中国主要城市房价指数", "labels": ["北京", "上海", "广州", "深圳", "杭州", "南京"]}
+{"title": "Distribution of Mobile OS in China", "labels": ["Android", "iOS", "Others"]}
+{"title": "Market Share of Chinese E-commerce Platforms", "labels": ["Alibaba", "JD.com", "Pinduoduo", "Others"]}
+{"title": "Energy Consumption in Beijing", "labels": ["Coal", "Natural Gas", "Renewables", "Others"]}
+{"title": "Popular Social Media Apps in China", "labels": ["WeChat", "TikTok", "QQ", "Weibo", "Others"]}
+{"title": "Types of Vegetables Consumed in Shanghai", "labels": ["Leafy Greens", "Root Vegetables", "Cruciferous", "Others"]}
+{"title": "Distribution of Household Income in Guangzhou", "labels": ["Low", "Middle", "High"]}
+{"title": "Usage of Public Transportation in Shenzhen", "labels": ["Subway", "Bus", "Taxi", "Bike", "Others"]}
+{"title": "Famous Chinese Cuisines by Region", "labels": ["Sichuan", "Cantonese", "Shandong", "Huaiyang", "Others"]}
+{"title": "Types of Housing in Chengdu", "labels": ["Apartments", "Detached Houses", "Condominiums", "Others"]}
+{"title": "Popular Tourist Destinations in China", "labels": ["Great Wall", "Forbidden City", "Terracotta Army", "Yellow Mountains", "Others"]}
+{"title": "Distribution of Industries in Tianjin", "labels": ["Manufacturing", "Services", "Finance", "Technology", "Others"]}
+{"title": "Common Pets in Chinese Households", "labels": ["Dogs", "Cats", "Fish", "Birds", "Others"]}
+{"title": "Types of Chinese Tea Consumed", "labels": ["Green Tea", "Black Tea", "Oolong", "White Tea", "Pu-erh"]}
+{"title": "Popular Chinese New Year Foods", "labels": ["Dumplings", "Nian Gao", "Spring Rolls", "Fish", "Others"]}
+{"title": "Distribution of Educational Levels in Wuhan", "labels": ["Primary", "Secondary", "Tertiary", "Others"]}
+{"title": "Common Chinese Last Names", "labels": ["Li", "Wang", "Zhang", "Liu", "Chen"]}
+{"title": "Types of Chinese Calligraphy Styles", "labels": ["Seal Script", "Clerical Script", "Regular Script", "Running Script", "Cursive Script"]}
+{"title": "Popular Chinese Festivals", "labels": ["Spring Festival", "Mid-Autumn Festival", "Dragon Boat Festival", "Qingming Festival", "Others"]}
+{"title": "Distribution of Chinese Zodiac Signs", "labels": ["Rat", "Ox", "Tiger", "Rabbit", "Dragon", "Snake", "Horse", "Goat", "Monkey", "Rooster", "Dog", "Pig"]}
+{"title": "Common Chinese Musical Instruments", "labels": ["Pipa", "Erhu", "Guzheng", "Dizi", "Others"]}
+{"title": "Types of Chinese Martial Arts", "labels": ["Wushu", "Tai Chi", "Kung Fu", "Qigong", "Others"]}
+{"title": "Popular Chinese Sports", "labels": ["Badminton", "Table Tennis", "Basketball", "Swimming", "Others"]}
+{"title": "Common Chinese Souvenirs", "labels": ["Tea", "Silk", "Jade", "Calligraphy", "Others"]}
+{"title": "Types of Chinese Opera", "labels": ["Peking Opera", "Yue Opera", "Huangmei Opera", "Sichuan Opera", "Others"]}
+{"title": "Distribution of Chinese Ethnic Groups", "labels": ["Han", "Zhuang", "Manchu", "Hui", "Miao", "Uyghur", "Yi", "Tibetan", "Mongol", "Others"]}
+{"title": "Common Chinese Proverbs", "labels": ["Failure is the mother of success", "A journey of a thousand miles begins with a single step", "Time flies", "A picture is worth a thousand words", "Others"]}
+{"title": "Types of Chinese Gardens", "labels": ["Imperial", "Private", "Public", "Buddhist", "Others"]}
+{"title": "Popular Chinese Novels", "labels": ["Dream of the Red Chamber", "Journey to the West", "Romance of the Three Kingdoms", "Water Margin", "Others"]}
+{"title": "Types of Chinese Calligraphy Brushes", "labels": ["Soft Brush", "Hard Brush", "Medium Brush", "Specialty Brush", "Others"]}
+{"title": "Common Chinese Herbal Medicines", "labels": ["Ginseng", "Astragalus", "Goji Berries", "Dang Gui", "Others"]}
+{"title": "Types of Chinese Knots", "labels": ["Double Happiness Knot", "Lucky Plait", "Clover Leaf Knot", "Pine Tree Knot", "Others"]}
+{"title": "Popular Chinese Paintings Themes", "labels": ["Landscapes", "Birds and Flowers", "Figures", "Animals", "Others"]}
+{"title": "Types of Chinese Pottery", "labels": ["Celadon", "Blue and White", "Sancai", "Yixing", "Others"]}
+{"title": "Common Chinese Idioms", "labels": ["One arrow, two hawks", "A drop in the ocean", "A bolt from the blue", "A lion's share", "Others"]}
+{"title": "Types of Chinese Puppetry", "labels": ["Hand Puppet", "Rod Puppet", "String Puppet", "Shadow Puppet", "Others"]}
+{"title": "Popular Chinese Snacks", "labels": ["Baozi", "Jianbing", "Tangyuan", "Chuanr", "Others"]}
+{"title": "Types of Chinese Seal Stones", "labels": ["Zisha", "Hetian Jade", "Lapis Lazuli", "Agate", "Others"]}
+{"title": "Common Chinese Philosophies", "labels": ["Confucianism", "Taoism", "Buddhism", "Legalism", "Others"]}
+{"title": "Types of Chinese Architecture", "labels": ["Palace", "Temple", "Pagoda", "Courtyard House", "Others"]}
+{"title": "Popular Chinese Historical Figures", "labels": ["Confucius", "Sun Yat-sen", "Mao Zedong", "Deng Xiaoping", "Others"]}
+{"title": "Types of Chinese Martial Arts Weapons", "labels": ["Sword", "Spear", "Staff", "Cudgel", "Others"]}
+{"title": "Common Chinese Chess Openings", "labels": ["Xiangqi", "Shogi", "Chess", "Go", "Others"]}
+{"title": "Types of Chinese New Year Decorations", "labels": ["Red Lanterns", "Couplets", "Paper Cuts", "Flower Arrangements", "Others"]}
+{"title": "Popular Chinese TV Shows", "labels": ["Story of Yanxi Palace", "The Untamed", "Go Go Squid!", "Eternal Love", "Others"]}
+{"title": "Types of Chinese Calligraphy Papers", "labels": ["Xuan Paper", "Moso Paper", "Gampi Paper", "Tengujo Paper", "Others"]}
+{"title": "Common Chinese Herbal Teas", "labels": ["Chrysanthemum Tea", "Jasmine Tea", "Lotus Leaf Tea", "Rose Tea", "Others"]}
+{"title": "Types of Chinese Seal Inks", "labels": ["Oil-based Ink", "Water-based Ink", "Paste Ink", "Powder Ink", "Others"]}
+{"title": "Popular Chinese Movies", "labels": ["Farewell My Concubine", "Crouching Tiger, Hidden Dragon", "Hero", "In the Mood for Love", "Others"]}
+{"title": "Types of Chinese Martial Arts Styles", "labels": ["External", "Internal", "Northern", "Southern", "Others"]}
+{"title": "Common Chinese Traditional Instruments", "labels": ["Guqin", "Xun", "Sheng", "Pipa", "Others"]}
+{"title": "Types of Chinese Opera Masks", "labels": ["Red", "Black", "White", "Blue", "Yellow", "Green", "Others"]}
+{"title": "Popular Chinese Mobile Games", "labels": ["Honor of Kings", "Clash of Clans", "PUBG Mobile", "League of Legends", "Others"]}
+{"title": "Types of Chinese Calligraphy Inks", "labels": ["Ink Stick", "Ink Stick Grind", "Ink Stick Paste", "Ink Stick Liquid", "Others"]}
+{"title": "Common Chinese Traditional Festivals", "labels": ["Lantern Festival", "Double Ninth Festival", "Winter Solstice", "Qixi Festival", "Others"]}
+{"title": "Types of Chinese Martial Arts Forms", "labels": ["Long Fist", "Southern Fist", "Tai Chi Chuan", "Xing Yi Quan", "Others"]}
+{"title": "Popular Chinese Internet Companies", "labels": ["Baidu", "Tencent", "Alibaba", "ByteDance", "Others"]}
+{"title": "Types of Chinese Calligraphy Styles", "labels": ["Zhuan", "Li", "Kai", "Xing", "Cao"]}
+{"title": "Common Chinese Traditional Dances", "labels": ["Dragon Dance", "Lion Dance", "Butterfly Dance", "Peacock Dance", "Others"]}
+{"title": "Types of Chinese Martial Arts Techniques", "labels": ["Striking", "Grappling", "Throwing", "Weapons", "Others"]}
+{"title": "Popular Chinese Fashion Designers", "labels": ["Guo Pei", "Vivienne Tam", "Jimmy Choo", "Alexander Wang", "Others"]}
+{"title": "Types of Chinese Calligraphy Nibs", "labels": ["Felt Nib", "Metal Nib", "Plastic Nib", "Wooden Nib", "Others"]}
+{"title": "Common Chinese Traditional Crafts", "labels": ["Paper Cutting", "Embroidery", "Carving", "Pottery", "Others"]}
+{"title": "Types of Chinese Martial Arts Training", "labels": ["Forms", "Sparring", "Qigong", "Weapons", "Others"]}
+{"title": "Popular Chinese Cuisine Ingredients", "labels": ["Soy Sauce", "Chili Oil", "Five Spice Powder", "Shaoxing Wine", "Others"]}
+{"title": "Types of Chinese Calligraphy Techniques", "labels": ["Running Script", "Cursive Script", "Seal Script", "Clerical Script", "Others"]}
+{"title": "Common Chinese Traditional Medicine Practices", "labels": ["Acupuncture", "Moxibustion", "Cupping", "Tui Na", "Others"]}
+{"title": "Types of Chinese Martial Arts Philosophy", "labels": ["Yin and Yang", "Wu Wei", "The Way of the Warrior", "The Art of War", "Others"]}
+{"title": "Popular Chinese Travel Destinations", "labels": ["Hangzhou", "Suzhou", "Guilin", "Zhangjiajie", "Others"]}
+{"title": "Types of Chinese Calligraphy Tools", "labels": ["Brush", "Ink", "Paper", "Slab", "Others"]}
+{"title": "Common Chinese Traditional Musical Genres", "labels": ["Folk", "Classical", "Opera", "Religious", "Others"]}
+{"title": "Types of Chinese Martial Arts Culture", "labels": ["Philosophy", "Ethics", "History", "Techniques", "Others"]}
+{"title": "Popular Chinese Art Forms", "labels": ["Calligraphy", "Painting", "Sculpture", "Ceramics", "Others"]}
+{"title": "Types of Chinese Calligraphy Fonts", "labels": ["Regular", "Running", "Cursive", "Seal", "Clerical"]}
+{"title": "Common Chinese Traditional Sports", "labels": ["Go", "Xiangqi", "Weiqi", "Cuju", "Others"]}
+{"title": "Types of Chinese Martial Arts Schools", "labels": ["Shaolin", "Wudang", "Emei", "Baguazhang", "Others"]}
+{"title": "Popular Chinese Cultural Festivals", "labels": ["Spring Festival", "Mid-Autumn Festival", "Dragon Boat Festival", "Qingming Festival", "Others"]}
+{"title": "Types of Chinese Calligraphy Forms", "labels": ["Vertical", "Horizontal", "Square", "Circular", "Others"]}
+{"title": "Common Chinese Traditional Textiles", "labels": ["Silk", "Brocade", "Damask", "Gauze", "Others"]}
+{"title": "Types of Chinese Martial Arts Disciplines", "labels": ["Striking", "Grappling", "Weaponry", "Qigong", "Others"]}
+{"title": "Popular Chinese Cultural Artifacts", "labels": ["Porcelain", "Bronze", "Jade", "Ivory", "Others"]}
+{"title": "Types of Chinese Calligraphy Works", "labels": ["Scroll", "Album", "Fan", "Inscription", "Others"]}
+{"title": "Common Chinese Traditional Games", "labels": ["Mahjong", "Chinese Chess", "Go", "Pai Gow", "Others"]}
+{"title": "Types of Chinese Martial Arts Training Methods", "labels": ["Solo Practice", "Partner Practice", "Group Practice", "Competition", "Others"]}
+{"title": "Popular Chinese Cultural Performances", "labels": ["Opera", "Acrobatics", "Puppetry", "Dance", "Others"]}
+{"title": "Types of Chinese Calligraphy Scripts", "labels": ["Oracle Bone Script", "Bronze Script", "Small Seal Script", "Clerical Script", "Others"]}
+{"title": "Common Chinese Traditional Musical Instruments", "labels": ["Erhu", "Pipa", "Guzheng", "Dizi", "Others"]}
+{"title": "Types of Chinese Martial Arts Techniques", "labels": ["Striking", "Grappling", "Throwing", "Weapons", "Others"]}
+{"title": "Popular Chinese Cultural Practices", "labels": ["Tea Ceremony", "Calligraphy", "Painting", "Martial Arts", "Others"]}
+{"title": "Types of Chinese Calligraphy Styles", "labels": ["Seal Script", "Clerical Script", "Regular Script", "Running Script", "Cursive Script"]}
+{"title": "Common Chinese Traditional Festivals", "labels": ["Spring Festival", "Mid-Autumn Festival", "Dragon Boat Festival", "Qingming Festival", "Others"]}
+{"title": "Types of Chinese Martial Arts Forms", "labels": ["Long Fist", "Southern Fist", "Tai Chi Chuan", "Xing Yi Quan", "Others"]}
+{"title": "Popular Chinese Cultural Symbols", "labels": ["Dragon", "Phoenix", "Turtle", "Tiger", "Others"]}
+{"title": "Types of Chinese Calligraphy Papers", "labels": ["Xuan Paper", "Moso Paper", "Gampi Paper", "Tengujo Paper", "Others"]}
+{"title": "Common Chinese Traditional Crafts", "labels": ["Paper Cutting", "Embroidery", "Carving", "Pottery", "Others"]}
+{"title": "Types of Chinese Martial Arts Weapons", "labels": ["Sword", "Spear", "Staff", "Cudgel", "Others"]}
+{"title": "Popular Chinese Cultural Traditions", "labels": ["Zodiac", "Feng Shui", "Acupuncture", "Qigong", "Others"]}
+{"title": "Types of Chinese Calligraphy Brushes", "labels": ["Soft Brush", "Hard Brush", "Medium Brush", "Specialty Brush", "Others"]}
+{"title": "Common Chinese Traditional Dances", "labels": ["Dragon Dance", "Lion Dance", "Butterfly Dance", "Peacock Dance", "Others"]}
+{"title": "Types of Chinese Martial Arts Styles", "labels": ["External", "Internal", "Northern", "Southern", "Others"]}
+{"title": "Popular Chinese Cultural Festivities", "labels": ["Lantern Festival", "Double Ninth Festival", "Winter Solstice", "Qixi Festival", "Others"]}
+{"title": "Types of Chinese Calligraphy Inks", "labels": ["Ink Stick", "Ink Stick Grind", "Ink Stick Paste", "Ink Stick Liquid", "Others"]}
+{"title": "Common Chinese Traditional Instruments", "labels": ["Guqin", "Xun", "Sheng", "Pipa", "Others"]}
+{"title": "Types of Chinese Martial Arts Training", "labels": ["Forms", "Sparring", "Qigong", "Weapons", "Others"]}
+{"title": "Popular Chinese Cultural Performers", "labels": ["Opera Singers", "Acrobats", "Puppeteers", "Dancers", "Others"]}
+{"title": "Types of Chinese Calligraphy Techniques", "labels": ["Running Script", "Cursive Script", "Seal Script", "Clerical Script", "Others"]}
+{"title": "Common Chinese Traditional Medicine Practices", "labels": ["Acupuncture", "Moxibustion", "Cupping", "Tui Na", "Others"]}
+{"title": "Types of Chinese Martial Arts Philosophy", "labels": ["Yin and Yang", "Wu Wei", "The Way of the Warrior", "The Art of War", "Others"]}
+{"title": "Popular Chinese Cultural Artifacts", "labels": ["Porcelain", "Bronze", "Jade", "Ivory", "Others"]}
+{"title": "各年龄段消费者比例", "labels": ["18-24岁", "25-34岁", "35-44岁", "45-54岁", "55岁以上"]}
+{"title": "不同城市人口分布", "labels": ["北京", "上海", "广州", "深圳", "其他"]}
+{"title": "各类水果销量占比", "labels": ["苹果", "香蕉", "橙子", "葡萄", "其他"]}
+{"title": "不同教育水平人群比例", "labels": ["小学", "初中", "高中", "本科", "研究生及以上"]}
+{"title": "各类交通工具使用频率", "labels": ["汽车", "公交", "地铁", "自行车", "步行"]}
+{"title": "不同职业收入分布", "labels": ["医生", "教师", "工程师", "销售", "其他"]}
+{"title": "各类电影类型受欢迎程度", "labels": ["动作", "喜剧", "爱情", "科幻", "恐怖"]}
+{"title": "不同季节旅游人数", "labels": ["春季", "夏季", "秋季", "冬季"]}
+{"title": "各类社交媒体使用时间", "labels": ["微信", "微博", "抖音", "快手", "其他"]}
+{"title": "不同品牌手机市场份额", "labels": ["苹果", "华为", "小米", "OPPO", "VIVO"]}
+{"title": "各类运动项目参与度", "labels": ["篮球", "足球", "羽毛球", "乒乓球", "跑步"]}
+{"title": "不同地区房价水平", "labels": ["一线城市", "二线城市", "三线城市", "四线城市", "农村"]}
+{"title": "各类饮料消费量", "labels": ["碳酸饮料", "果汁", "茶饮料", "矿泉水", "咖啡"]}
+{"title": "不同年龄段网购频率", "labels": ["18-24岁", "25-34岁", "35-44岁", "45-54岁", "55岁以上"]}
+{"title": "各类宠物饲养比例", "labels": ["猫", "狗", "鱼", "鸟", "其他"]}
+{"title": "不同时间段电视观看率", "labels": ["早间", "午间", "晚间", "深夜"]}
+{"title": "各类书籍销量排行", "labels": ["小说", "教材", "科普", "历史", "其他"]}
+{"title": "不同出行方式碳排放量", "labels": ["汽车", "公交", "地铁", "自行车", "步行"]}
+{"title": "各类保险购买比例", "labels": ["人寿保险", "健康保险", "财产保险", "车险", "其他"]}
+{"title": "不同餐饮类型受欢迎程度", "labels": ["中餐", "西餐", "日餐", "韩餐", "其他"]}
+{"title": "各类电子产品销量", "labels": ["手机", "电脑", "平板", "智能手表", "耳机"]}
+{"title": "不同学历就业率", "labels": ["小学", "初中", "高中", "本科", "研究生及以上"]}
+{"title": "各类投资渠道占比", "labels": ["股票", "基金", "债券", "房地产", "其他"]}
+{"title": "不同季节服装销量", "labels": ["春季", "夏季", "秋季", "冬季"]}
+{"title": "各类音乐类型喜好度", "labels": ["流行", "摇滚", "古典", "爵士", "民谣"]}
+{"title": "不同地区GDP贡献", "labels": ["东部", "中部", "西部", "东北"]}
+{"title": "各类家电购买比例", "labels": ["电视", "冰箱", "洗衣机", "空调", "其他"]}
+{"title": "不同年龄段健康状况", "labels": ["18-24岁", "25-34岁", "35-44岁", "45-54岁", "55岁以上"]}
+{"title": "各类旅游目的地选择", "labels": ["国内", "亚洲", "欧洲", "美洲", "非洲"]}
+{"title": "不同时间段工作效率", "labels": ["上午", "下午", "晚上"]}
+{"title": "各类支付方式使用频率", "labels": ["现金", "银行卡", "支付宝", "微信支付", "其他"]}
+{"title": "不同地区空气质量", "labels": ["优", "良", "轻度污染", "中度污染", "重度污染"]}
+{"title": "各类蔬菜消费量", "labels": ["叶菜类", "根茎类", "瓜果类", "豆类", "菌类"]}
+{"title": "不同年龄段阅读习惯", "labels": ["18-24岁", "25-34岁", "35-44岁", "45-54岁", "55岁以上"]}
+{"title": "各类运动装备销量", "labels": ["球类", "健身器材", "户外装备", "游泳装备", "其他"]}
+{"title": "不同地区教育资源分布", "labels": ["一线城市", "二线城市", "三线城市", "四线城市", "农村"]}
+{"title": "各类化妆品销量", "labels": ["护肤品", "彩妆", "香水", "美发产品", "其他"]}
+{"title": "不同年龄段睡眠质量", "labels": ["18-24岁", "25-34岁", "35-44岁", "45-54岁", "55岁以上"]}
+{"title": "各类交通工具事故率", "labels": ["汽车", "公交", "地铁", "自行车", "步行"]}
+{"title": "不同地区水资源分布", "labels": ["东部", "中部", "西部", "东北"]}
+{"title": "各类零食消费量", "labels": ["糖果", "饼干", "坚果", "膨化食品", "其他"]}
+{"title": "不同年龄段娱乐活动", "labels": ["18-24岁", "25-34岁", "35-44岁", "45-54岁", "55岁以上"]}
+{"title": "各类家具销量", "labels": ["沙发", "床", "衣柜", "书桌", "其他"]}
+{"title": "不同地区能源消耗", "labels": ["煤炭", "石油", "天然气", "水电", "其他"]}
+{"title": "各类软件使用频率", "labels": ["办公软件", "设计软件", "游戏软件", "社交软件", "其他"]}
+{"title": "不同年龄段饮食习惯", "labels": ["18-24岁", "25-34岁", "35-44岁", "45-54岁", "55岁以上"]}
+{"title": "各类运动赛事观众人数", "labels": ["足球", "篮球", "网球", "羽毛球", "乒乓球"]}
+{"title": "不同地区交通拥堵情况", "labels": ["一线城市", "二线城市", "三线城市", "四线城市", "农村"]}
+{"title": "各类电子书阅读量", "labels": ["小说", "教材", "科普", "历史", "其他"]}
+{"title": "不同年龄段学习时间", "labels": ["18-24岁", "25-34岁", "35-44岁", "45-54岁", "55岁以上"]}
+{"title": "各类环保措施实施情况", "labels": ["垃圾分类", "节能减排", "绿色出行", "植树造林", "其他"]}
+{"title": "不同地区医疗资源分布", "labels": ["一线城市", "二线城市", "三线城市", "四线城市", "农村"]}
+{"title": "各类健身方式选择", "labels": ["健身房", "户外跑步", "瑜伽", "游泳", "其他"]}
+{"title": "不同年龄段消费水平", "labels": ["18-24岁", "25-34岁", "35-44岁", "45-54岁", "55岁以上"]}
+{"title": "各类智能家居产品销量", "labels": ["智能灯泡", "智能插座", "智能门锁", "智能摄像头", "其他"]}
+{"title": "不同地区网络覆盖率", "labels": ["一线城市", "二线城市", "三线城市", "四线城市", "农村"]}
+{"title": "各类在线课程受欢迎程度", "labels": ["编程", "语言学习", "艺术", "金融", "其他"]}
+{"title": "不同年龄段旅行偏好", "labels": ["18-24岁", "25-34岁", "35-44岁", "45-54岁", "55岁以上"]}
+{"title": "各类游戏类型玩家数量", "labels": ["角色扮演", "策略", "射击", "体育", "其他"]}
+{"title": "不同地区文化活动参与度", "labels": ["一线城市", "二线城市", "三线城市", "四线城市", "农村"]}
+{"title": "各类健康食品销量", "labels": ["有机食品", "低脂食品", "高蛋白食品", "无糖食品", "其他"]}
+{"title": "不同年龄段社交媒体活跃度", "labels": ["18-24岁", "25-34岁", "35-44岁", "45-54岁", "55岁以上"]}
+{"title": "各类交通工具维护成本", "labels": ["汽车", "公交", "地铁", "自行车", "步行"]}
+{"title": "不同地区气候变化", "labels": ["东部", "中部", "西部", "东北"]}
+{"title": "各类宠物食品销量", "labels": ["猫粮", "狗粮", "鱼食", "鸟食", "其他"]}
+{"title": "不同年龄段投资偏好", "labels": ["18-24岁", "25-34岁", "35-44岁", "45-54岁", "55岁以上"]}
+{"title": "各类智能家居系统使用率", "labels": ["安防系统", "照明系统", "温控系统", "娱乐系统", "其他"]}
+{"title": "不同地区教育投入", "labels": ["一线城市", "二线城市", "三线城市", "四线城市", "农村"]}
+{"title": "各类运动品牌市场份额", "labels": ["耐克", "阿迪达斯", "安踏", "李宁", "其他"]}
+{"title": "不同年龄段生活满意度", "labels": ["18-24岁", "25-34岁", "35-44岁", "45-54岁", "55岁以上"]}
+{"title": "各类电子产品故障率", "labels": ["手机", "电脑", "平板", "智能手表", "耳机"]}
+{"title": "不同地区就业机会", "labels": ["一线城市", "二线城市", "三线城市", "四线城市", "农村"]}
+{"title": "各类在线服务使用频率", "labels": ["在线购物", "在线教育", "在线医疗", "在线娱乐", "其他"]}
+{"title": "不同年龄段运动习惯", "labels": ["18-24岁", "25-34岁", "35-44岁", "45-54岁", "55岁以上"]}
+{"title": "各类交通工具能源消耗", "labels": ["汽车", "公交", "地铁", "自行车", "步行"]}
+{"title": "不同地区环境保护意识", "labels": ["一线城市", "二线城市", "三线城市", "四线城市", "农村"]}
+{"title": "各类健康检查项目参与度", "labels": ["体检", "牙科检查", "眼科检查", "妇科检查", "其他"]}
+{"title": "不同年龄段理财方式", "labels": ["18-24岁", "25-34岁", "35-44岁", "45-54岁", "55岁以上"]}
+{"title": "各类智能家居设备普及率", "labels": ["智能灯泡", "智能插座", "智能门锁", "智能摄像头", "其他"]}
+{"title": "不同地区科技创新能力", "labels": ["一线城市", "二线城市", "三线城市", "四线城市", "农村"]}
+{"title": "各类在线游戏收入", "labels": ["角色扮演", "策略", "射击", "体育", "其他"]}
+{"title": "不同年龄段阅读偏好", "labels": ["18-24岁", "25-34岁", "35-44岁", "45-54岁", "55岁以上"]}
+{"title": "各类交通工具使用成本", "labels": ["汽车", "公交", "地铁", "自行车", "步行"]}
+{"title": "不同地区文化消费水平", "labels": ["一线城市", "二线城市", "三线城市", "四线城市", "农村"]}
+{"title": "各类健康生活方式选择", "labels": ["健康饮食", "规律运动", "充足睡眠", "心理健康", "其他"]}
+{"title": "不同年龄段社交活动", "labels": ["18-24岁", "25-34岁", "35-44岁", "45-54岁", "55岁以上"]}
+{"title": "各类智能家居系统故障率", "labels": ["安防系统", "照明系统", "温控系统", "娱乐系统", "其他"]}
+{"title": "不同地区教育质量", "labels": ["一线城市", "二线城市", "三线城市", "四线城市", "农村"]}
+{"title": "各类运动赛事赞助商", "labels": ["耐克", "阿迪达斯", "安踏", "李宁", "其他"]}
+{"title": "不同年龄段生活压力", "labels": ["18-24岁", "25-34岁", "35-44岁", "45-54岁", "55岁以上"]}
+{"title": "各类电子产品更新频率", "labels": ["手机", "电脑", "平板", "智能手表", "耳机"]}
+{"title": "不同地区就业竞争", "labels": ["一线城市", "二线城市", "三线城市", "四线城市", "农村"]}
+{"title": "各类在线服务满意度", "labels": ["在线购物", "在线教育", "在线医疗", "在线娱乐", "其他"]}
+{"title": "不同年龄段运动偏好", "labels": ["18-24岁", "25-34岁", "35-44岁", "45-54岁", "55岁以上"]}
+{"title": "各类交通工具环保指数", "labels": ["汽车", "公交", "地铁", "自行车", "步行"]}
+{"title": "不同地区环境保护政策", "labels": ["一线城市", "二线城市", "三线城市", "四线城市", "农村"]}
+{"title": "各类健康检查项目普及率", "labels": ["体检", "牙科检查", "眼科检查", "妇科检查", "其他"]}
+{"title": "不同年龄段理财意识", "labels": ["18-24岁", "25-34岁", "35-44岁", "45-54岁", "55岁以上"]}
+{"title": "各类智能家居设备故障率", "labels": ["智能灯泡", "智能插座", "智能门锁", "智能摄像头", "其他"]}
+{"title": "不同地区科技创新投入", "labels": ["一线城市", "二线城市", "三线城市", "四线城市", "农村"]}
+{"title": "各类在线游戏玩家满意度", "labels": ["角色扮演", "策略", "射击", "体育", "其他"]}
+{"title": "不同年龄段阅读时间", "labels": ["18-24岁", "25-34岁", "35-44岁", "45-54岁", "55岁以上"]}
+{"title": "各类交通工具使用满意度", "labels": ["汽车", "公交", "地铁", "自行车", "步行"]}
+{"title": "不同地区文化活动质量", "labels": ["一线城市", "二线城市", "三线城市", "四线城市", "农村"]}
+{"title": "各类健康生活方式普及率", "labels": ["健康饮食", "规律运动", "充足睡眠", "心理健康", "其他"]}
+{"title": "不同年龄段社交频率", "labels": ["18-24岁", "25-34岁", "35-44岁", "45-54岁", "55岁以上"]}
+{"title": "各类智能家居系统更新频率", "labels": ["安防系统", "照明系统", "温控系统", "娱乐系统", "其他"]}
+{"title": "不同地区教育资源质量", "labels": ["一线城市", "二线城市", "三线城市", "四线城市", "农村"]}
+{"title": "各类运动赛事观众满意度", "labels": ["足球", "篮球", "网球", "羽毛球", "乒乓球"]}
+{"title": "不同年龄段生活质量", "labels": ["18-24岁", "25-34岁", "35-44岁", "45-54岁", "55岁以上"]}
+{"title": "各类电子产品用户满意度", "labels": ["手机", "电脑", "平板", "智能手表", "耳机"]}
+{"title": "不同地区就业环境", "labels": ["一线城市", "二线城市", "三线城市", "四线城市", "农村"]}
+{"title": "各类在线服务用户满意度", "labels": ["在线购物", "在线教育", "在线医疗", "在线娱乐", "其他"]}
+{"title": "各年龄段人口分布", "labels": ["0-18岁", "19-35岁", "36-50岁", "51-65岁", "65岁以上"]}
+{"title": "不同教育水平占比", "labels": ["小学", "初中", "高中", "本科", "研究生及以上"]}
+{"title": "各行业就业人数", "labels": ["制造业", "服务业", "金融业", "教育", "医疗"]}
+{"title": "每月家庭支出构成", "labels": ["食品", "住房", "交通", "教育", "娱乐"]}
+{"title": "不同地区GDP贡献", "labels": ["华北", "华东", "华南", "西南", "西北", "东北"]}
+{"title": "各类水果销量", "labels": ["苹果", "香蕉", "橙子", "葡萄", "梨"]}
+{"title": "不同类型电影票房", "labels": ["动作片", "喜剧片", "爱情片", "科幻片", "恐怖片"]}
+{"title": "各品牌手机市场份额", "labels": ["苹果", "华为", "小米", "OPPO", "vivo"]}
+{"title": "不同运动项目参与人数", "labels": ["足球", "篮球", "乒乓球", "羽毛球", "游泳"]}
+{"title": "各类书籍销量", "labels": ["小说", "非小说", "教育", "儿童", "科技"]}
+{"title": "不同旅游目的地偏好", "labels": ["国内", "亚洲", "欧洲", "北美", "南美"]}
+{"title": "各类社交媒体用户数", "labels": ["微信", "微博", "抖音", "快手", "B站"]}
+{"title": "不同职业平均收入", "labels": ["医生", "教师", "工程师", "销售", "公务员"]}
+{"title": "各类家电销售量", "labels": ["电视", "冰箱", "洗衣机", "空调", "微波炉"]}
+{"title": "不同汽车品牌销量", "labels": ["大众", "丰田", "本田", "日产", "现代"]}
+{"title": "各类保险购买比例", "labels": ["人寿保险", "健康保险", "车险", "财产保险", "旅行保险"]}
+{"title": "不同餐饮类型消费", "labels": ["中餐", "西餐", "快餐", "甜点", "咖啡"]}
+{"title": "各类电子产品销量", "labels": ["笔记本电脑", "平板电脑", "智能手机", "智能手表", "耳机"]}
+{"title": "不同音乐类型受欢迎程度", "labels": ["流行音乐", "摇滚音乐", "古典音乐", "爵士音乐", "电子音乐"]}
+{"title": "各类服装品牌市场份额", "labels": ["耐克", "阿迪达斯", "优衣库", "ZARA", "H&M"]}
+{"title": "不同宠物类型饲养比例", "labels": ["狗", "猫", "鱼", "鸟", "仓鼠"]}
+{"title": "各类饮料销量", "labels": ["碳酸饮料", "果汁", "茶饮料", "咖啡", "矿泉水"]}
+{"title": "不同支付方式使用频率", "labels": ["现金", "信用卡", "支付宝", "微信支付", "银行转账"]}
+{"title": "各类家具销售量", "labels": ["沙发", "床", "餐桌", "书柜", "衣柜"]}
+{"title": "不同健身项目参与度", "labels": ["跑步", "瑜伽", "健身房", "游泳", "舞蹈"]}
+{"title": "各类化妆品销量", "labels": ["护肤品", "彩妆", "香水", "美发产品", "个人护理"]}
+{"title": "不同投资渠道比例", "labels": ["股票", "债券", "基金", "房地产", "黄金"]}
+{"title": "各类零食销量", "labels": ["薯片", "巧克力", "饼干", "糖果", "坚果"]}
+{"title": "不同交通工具使用率", "labels": ["私家车", "公共汽车", "地铁", "自行车", "步行"]}
+{"title": "各类能源消耗比例", "labels": ["煤炭", "石油", "天然气", "核能", "可再生能源"]}
+{"title": "不同语言学习人数", "labels": ["英语", "日语", "韩语", "法语", "德语"]}
+{"title": "各类游戏类型受欢迎程度", "labels": ["角色扮演", "策略", "射击", "体育", "益智"]}
+{"title": "不同电视剧类型收视率", "labels": ["爱情", "悬疑", "历史", "科幻", "喜剧"]}
+{"title": "各类艺术品销售量", "labels": ["绘画", "雕塑", "摄影", "陶瓷", "珠宝"]}
+{"title": "不同运动鞋品牌市场份额", "labels": ["耐克", "阿迪达斯", "新百伦", "彪马", "安踏"]}
+{"title": "各类蔬菜销量", "labels": ["西红柿", "黄瓜", "胡萝卜", "白菜", "土豆"]}
+{"title": "不同旅游活动参与度", "labels": ["观光", "探险", "休闲", "文化", "美食"]}
+{"title": "各类健康产品销量", "labels": ["保健品", "医疗器械", "健康食品", "健身器材", "健康服务"]}
+{"title": "不同学术领域研究人数", "labels": ["物理", "化学", "生物", "数学", "计算机科学"]}
+{"title": "各类节日庆祝方式", "labels": ["家庭聚会", "外出旅游", "购物", "观看演出", "公益活动"]}
+{"title": "不同电影院观影人数", "labels": ["IMAX", "普通厅", "VIP厅", "4D厅", "私人影院"]}
+{"title": "各类环保活动参与度", "labels": ["垃圾分类", "植树造林", "节能减排", "环保宣传", "环保捐赠"]}
+{"title": "不同网络游戏玩家数", "labels": ["角色扮演", "策略", "射击", "体育", "益智"]}
+{"title": "各类音乐会观众数", "labels": ["古典音乐会", "流行音乐会", "摇滚音乐会", "爵士音乐会", "电子音乐会"]}
+{"title": "不同展览类型参观人数", "labels": ["艺术展", "科技展", "历史展", "自然展", "教育展"]}
+{"title": "各类宠物食品销量", "labels": ["狗粮", "猫粮", "鱼食", "鸟食", "仓鼠食"]}
+{"title": "不同运动装备品牌市场份额", "labels": ["耐克", "阿迪达斯", "安德玛", "彪马", "李宁"]}
+{"title": "各类植物种植面积", "labels": ["蔬菜", "水果", "花卉", "树木", "草坪"]}
+{"title": "不同旅游住宿类型选择", "labels": ["酒店", "民宿", "青旅", "露营", "度假村"]}
+{"title": "各类健康检查项目参与度", "labels": ["体检", "牙科检查", "眼科检查", "妇科检查", "男科检查"]}
+{"title": "不同学术期刊投稿量", "labels": ["自然科学", "社会科学", "医学", "工程技术", "人文艺术"]}
+{"title": "各类节日礼物销量", "labels": ["鲜花", "巧克力", "珠宝", "电子产品", "玩具"]}
+{"title": "不同电影类型票房", "labels": ["动作片", "喜剧片", "爱情片", "科幻片", "恐怖片"]}
+{"title": "各类环保产品销量", "labels": ["可降解塑料", "节能灯", "太阳能设备", "电动汽车", "环保建材"]}
+{"title": "不同网络平台用户数", "labels": ["微信", "微博", "抖音", "快手", "B站"]}
+{"title": "各类音乐节观众数", "labels": ["流行音乐节", "摇滚音乐节", "古典音乐节", "爵士音乐节", "电子音乐节"]}
+{"title": "不同展览馆参观人数", "labels": ["国家博物馆", "科技馆", "艺术馆", "自然博物馆", "历史博物馆"]}
+{"title": "各类宠物服务需求", "labels": ["美容", "医疗", "训练", "寄养", "用品"]}
+{"title": "不同运动品牌市场份额", "labels": ["耐克", "阿迪达斯", "安德玛", "彪马", "李宁"]}
+{"title": "各类植物品种种植比例", "labels": ["蔬菜", "水果", "花卉", "树木", "草坪"]}
+{"title": "不同旅游活动类型参与度", "labels": ["观光", "探险", "休闲", "文化", "美食"]}
+{"title": "各类健康服务需求", "labels": ["体检", "牙科", "眼科", "妇科", "男科"]}
+{"title": "不同学术领域研究成果", "labels": ["物理", "化学", "生物", "数学", "计算机科学"]}
+{"title": "各类节日庆祝活动", "labels": ["家庭聚会", "外出旅游", "购物", "观看演出", "公益活动"]}
+{"title": "不同电影院观影类型", "labels": ["IMAX", "普通厅", "VIP厅", "4D厅", "私人影院"]}
+{"title": "各类环保活动参与人数", "labels": ["垃圾分类", "植树造林", "节能减排", "环保宣传", "环保捐赠"]}
+{"title": "不同网络游戏类型玩家数", "labels": ["角色扮演", "策略", "射击", "体育", "益智"]}
+{"title": "各类音乐会类型观众数", "labels": ["古典音乐会", "流行音乐会", "摇滚音乐会", "爵士音乐会", "电子音乐会"]}
+{"title": "不同展览类型参观人数", "labels": ["艺术展", "科技展", "历史展", "自然展", "教育展"]}
+{"title": "各类宠物食品类型销量", "labels": ["狗粮", "猫粮", "鱼食", "鸟食", "仓鼠食"]}
+{"title": "不同运动装备品牌市场份额", "labels": ["耐克", "阿迪达斯", "安德玛", "彪马", "李宁"]}
+{"title": "各类植物种植类型面积", "labels": ["蔬菜", "水果", "花卉", "树木", "草坪"]}
+{"title": "不同旅游住宿类型选择", "labels": ["酒店", "民宿", "青旅", "露营", "度假村"]}
+{"title": "各类健康检查项目参与度", "labels": ["体检", "牙科检查", "眼科检查", "妇科检查", "男科检查"]}
+{"title": "不同学术期刊投稿量", "labels": ["自然科学", "社会科学", "医学", "工程技术", "人文艺术"]}
+{"title": "各类节日礼物销量", "labels": ["鲜花", "巧克力", "珠宝", "电子产品", "玩具"]}
+{"title": "不同电影类型票房", "labels": ["动作片", "喜剧片", "爱情片", "科幻片", "恐怖片"]}
+{"title": "各类环保产品销量", "labels": ["可降解塑料", "节能灯", "太阳能设备", "电动汽车", "环保建材"]}
+{"title": "不同网络平台用户数", "labels": ["微信", "微博", "抖音", "快手", "B站"]}
+{"title": "各类音乐节观众数", "labels": ["流行音乐节", "摇滚音乐节", "古典音乐节", "爵士音乐节", "电子音乐节"]}
+{"title": "不同展览馆参观人数", "labels": ["国家博物馆", "科技馆", "艺术馆", "自然博物馆", "历史博物馆"]}
+{"title": "各类宠物服务需求", "labels": ["美容", "医疗", "训练", "寄养", "用品"]}
+{"title": "不同运动品牌市场份额", "labels": ["耐克", "阿迪达斯", "安德玛", "彪马", "李宁"]}
+{"title": "各类植物品种种植比例", "labels": ["蔬菜", "水果", "花卉", "树木", "草坪"]}
+{"title": "不同旅游活动类型参与度", "labels": ["观光", "探险", "休闲", "文化", "美食"]}
+{"title": "各类健康服务需求", "labels": ["体检", "牙科", "眼科", "妇科", "男科"]}
+{"title": "不同学术领域研究成果", "labels": ["物理", "化学", "生物", "数学", "计算机科学"]}
+{"title": "各类节日庆祝活动", "labels": ["家庭聚会", "外出旅游", "购物", "观看演出", "公益活动"]}
+{"title": "不同电影院观影类型", "labels": ["IMAX", "普通厅", "VIP厅", "4D厅", "私人影院"]}
+{"title": "各类环保活动参与人数", "labels": ["垃圾分类", "植树造林", "节能减排", "环保宣传", "环保捐赠"]}
+{"title": "不同网络游戏类型玩家数", "labels": ["角色扮演", "策略", "射击", "体育", "益智"]}
+{"title": "各类音乐会类型观众数", "labels": ["古典音乐会", "流行音乐会", "摇滚音乐会", "爵士音乐会", "电子音乐会"]}
+{"title": "不同展览类型参观人数", "labels": ["艺术展", "科技展", "历史展", "自然展", "教育展"]}
+{"title": "各类宠物食品类型销量", "labels": ["狗粮", "猫粮", "鱼食", "鸟食", "仓鼠食"]}
+{"title": "不同运动装备品牌市场份额", "labels": ["耐克", "阿迪达斯", "安德玛", "彪马", "李宁"]}
+{"title": "各类植物种植类型面积", "labels": ["蔬菜", "水果", "花卉", "树木", "草坪"]}
+{"title": "不同旅游住宿类型选择", "labels": ["酒店", "民宿", "青旅", "露营", "度假村"]}
+{"title": "各类健康检查项目参与度", "labels": ["体检", "牙科检查", "眼科检查", "妇科检查", "男科检查"]}
+{"title": "不同学术期刊投稿量", "labels": ["自然科学", "社会科学", "医学", "工程技术", "人文艺术"]}
+{"title": "各类节日礼物销量", "labels": ["鲜花", "巧克力", "珠宝", "电子产品", "玩具"]}
+{"title": "不同电影类型票房", "labels": ["动作片", "喜剧片", "爱情片", "科幻片", "恐怖片"]}
+{"title": "各类环保产品销量", "labels": ["可降解塑料", "节能灯", "太阳能设备", "电动汽车", "环保建材"]}
+{"title": "不同网络平台用户数", "labels": ["微信", "微博", "抖音", "快手", "B站"]}
+{"title": "各类音乐节观众数", "labels": ["流行音乐节", "摇滚音乐节", "古典音乐节", "爵士音乐节", "电子音乐节"]}
+{"title": "不同展览馆参观人数", "labels": ["国家博物馆", "科技馆", "艺术馆", "自然博物馆", "历史博物馆"]}
+{"title": "各类宠物服务需求", "labels": ["美容", "医疗", "训练", "寄养", "用品"]}
+{"title": "不同运动品牌市场份额", "labels": ["耐克", "阿迪达斯", "安德玛", "彪马", "李宁"]}
+{"title": "各类植物品种种植比例", "labels": ["蔬菜", "水果", "花卉", "树木", "草坪"]}
+{"title": "不同旅游活动类型参与度", "labels": ["观光", "探险", "休闲", "文化", "美食"]}
+{"title": "各类健康服务需求", "labels": ["体检", "牙科", "眼科", "妇科", "男科"]}
+{"title": "不同学术领域研究成果", "labels": ["物理", "化学", "生物", "数学", "计算机科学"]}
+{"title": "各类节日庆祝活动", "labels": ["家庭聚会", "外出旅游", "购物", "观看演出", "公益活动"]}
+{"title": "不同电影院观影类型", "labels": ["IMAX", "普通厅", "VIP厅", "4D厅", "私人影院"]}
+{"title": "各类环保活动参与人数", "labels": ["垃圾分类", "植树造林", "节能减排", "环保宣传", "环保捐赠"]}
+{"title": "不同网络游戏类型玩家数", "labels": ["角色扮演", "策略", "射击", "体育", "益智"]}
+{"title": "各类音乐会类型观众数", "labels": ["古典音乐会", "流行音乐会", "摇滚音乐会", "爵士音乐会", "电子音乐会"]}
+{"title": "不同展览类型参观人数", "labels": ["艺术展", "科技展", "历史展", "自然展", "教育展"]}
+{"title": "各类宠物食品类型销量", "labels": ["狗粮", "猫粮", "鱼食", "鸟食", "仓鼠食"]}
+{"title": "不同运动装备品牌市场份额", "labels": ["耐克", "阿迪达斯", "安德玛", "彪马", "李宁"]}
+{"title": "各类植物种植类型面积", "labels": ["蔬菜", "水果", "花卉", "树木", "草坪"]}
