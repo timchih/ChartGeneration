@@ -1,5 +1,6 @@
 import random
 import string
+import os
 
 def generate_text(txt_len, dict):
     random_star_idx = random.randint(0, len(dict) - txt_len)
@@ -35,6 +36,7 @@ def randomcolor():
     color ="#"+''.join([random.choice(colorArr) for i in range(6)])
     return color
 
-def randomFileName(chartType, it):
+def randomFileName(chartType, it, output_path):
     output_file_name = "".join(random.choices(string.ascii_uppercase + string.digits, k=20))
-    return "{}_{}_{}".format(chartType, it, output_file_name)
+    output_file_name = "{}_{}_{}".format(chartType, it, output_file_name)
+    return os.path.join(output_path, output_file_name)
