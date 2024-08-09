@@ -4,3 +4,4 @@ deepseek.py
 
 #ignore ALL files in ANY directory named
 __pycache__/
+output/

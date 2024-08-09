@@ -33,16 +33,6 @@ class Bar:
         self.max_val = center_val * (1 + val_range)
         self.is_random = is_random
 
-    def randData(self):
-        num_bars = np.random.randint(self.min_bars, self.max_bars)
-        num_categories = np.random.randint(self.min_categories, self.max_categories)
-        bar_labels = self.randLabelList(num_bars)
-        cate_labels = self.randLabelList(num_categories)
-        values = [[random.randint(self.min_val, self.max_val) for _ in range(num_bars)] for _ in range(num_categories)]
-        title, xlabel, ylabel = self.randLabelList(3)
-        print(values)
-        return num_bars, num_categories, bar_labels, cate_labels, values, title, xlabel, ylabel
-
     def randBar(self, output_file_name):
         # Generate random data
         _, _, bar_labels, cate_labels, values, title, xlabel, ylabel = self.randData()
@@ -66,13 +56,13 @@ class Bar:
 
         # create info dict from data
         result_dict = self.generateResult(title, xlabel, ylabel, output_file_name, {category: dict(zip(bar_labels, values))}, 'stacked bar')
-        print(result_dict['markdown'])
+        # print(result_dict['markdown'])
         return result_dict
         
 
     def randStackBar(self, output_file_name):
         # Generate random data
-        num_bars, _, bar_labels, cate_labels, values, title, xlabel, ylabel = self.randData()
+        num_bars, num_categories, bar_labels, cate_labels, values, title, xlabel, ylabel = self.randData()
 
         # Create the stacked bar chart
         _, ax = plt.subplots()
@@ -98,7 +88,12 @@ class Bar:
         plt.show()
         # plt.savefig(output_file_name + '.png')
 
-        result_dict = self.generateResult(title, xlabel, ylabel, output_file_name, nan, 'stacked bar')
+        val_dict = dict()
+        for i, cate in enumerate(cate_labels):
+            val_dict[cate] = dict(zip(bar_labels, values[i]))
+
+        # print(val_dict)
+        result_dict = self.generateResult(title, xlabel, ylabel, output_file_name, val_dict, 'stacked bar')
         return result_dict
 
     def randGroupBar(self, output_file_name):
@@ -136,9 +131,19 @@ class Bar:
         result_dict = {'image': output_file_name + '.png', 'json' : json_dict, 'markdown' : self.barToMarkdown(json_dict), 'type': typeBar, 'source': 'Tim'}
         return result_dict
     
+    def randData(self):
+        num_bars = np.random.randint(self.min_bars, self.max_bars)
+        num_categories = np.random.randint(self.min_categories, self.max_categories)
+        bar_labels = self.randLabelList(num_bars)
+        cate_labels = self.randLabelList(num_categories)
+        values = [[random.randint(self.min_val, self.max_val) for _ in range(num_bars)] for _ in range(num_categories)]
+        title, xlabel, ylabel = self.randLabelList(3)
+        # print(values)
+        return num_bars, num_categories, bar_labels, cate_labels, values, title, xlabel, ylabel
+
 
 
 if __name__ == "__main__":
     bar = Bar()
-    bar.randBar("something")
-    # bar.randStackBar('something')
+    # bar.randBar("something")
+    bar.randStackBar('something')
