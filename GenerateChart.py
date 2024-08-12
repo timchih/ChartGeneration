@@ -1,6 +1,7 @@
 import generation_helper as gh
 import os
 from Pie import Pie
+from Bar import Bar
 import json
 import numpy as np
 
@@ -22,6 +23,12 @@ class GenerateChart:
                  language='en',
                  min_slice=3,
                  max_slice=8,
+                 min_bars=3,
+                 max_bars=10,
+                 min_categories=1,
+                 max_categories=4,
+                 val_range=0.5,
+                 center_val=100,
                  ) -> None:
         # general variables
         self.chartType = chartType
@@ -38,6 +45,12 @@ class GenerateChart:
         self.min_slice = min_slice
         self.max_slice = max_slice
         # bar variables
+        self.min_bars = min_bars
+        self.max_bars = max_bars
+        self.min_categories = min_categories
+        self.max_categories = max_categories
+        self.val_range = val_range
+        self.center_val = center_val
 
     def generate_pie(self, f_gt):
         if self.is_random:
@@ -73,6 +86,43 @@ class GenerateChart:
                    self.max_txt_len,
                    self.is_random)
 
+    def generate_bar(self, f_gt):
+        if self.is_random:
+            for i in range(self.img_count):
+                output_full_path = gh.randomFileName(self.chartType, i, self.output_path)
+                bar = self.assignBar()
+                result_dict = bar.randBar(output_full_path)
+
+                f_gt.write(json.dumps(result_dict, ensure_ascii=False) + '\n')
+        else:
+            with open(self.dict_path, 'r', encoding='utf-8') as file:
+                for i, line in enumerate(file):
+                    output_full_path = gh.randomFileName(self.chartType, i, self.output_path)
+                    data = json.loads(line)
+                    bar = self.assignBar()
+                    
+                    result_dict_list = bar.barFromDict(output_full_path, data=data)
+
+                    for result_dict in result_dict_list:
+                        f_gt.write(json.dumps(result_dict, ensure_ascii=False) + '\n')
+
+    def assignBar(self):
+        if self.language == 'en':
+            lang_dict = self.en
+        else:
+            lang_dict = self.ch
+        num_bars = np.random.randint(self.min_bars, self.max_bars)
+        num_categories = np.random.randint(self.min_categories, self.max_categories)
+        return Bar(lang_dict,
+                   num_bars,
+                   num_categories,
+                   self.language,
+                   self.min_txt_len,
+                   self.max_txt_len,
+                   self.val_range,
+                   self.center_val,
+                   self.is_random)
+
     def generate_chart(self):
         # jsonl output file
         f_gt = open(os.path.join(self.output_path, "gt.jsonl"), encoding="utf-8", mode="w")
@@ -80,8 +130,8 @@ class GenerateChart:
         # identify the type of chart need to be generated
         if self.chartType == 'pie':
             self.generate_pie(f_gt)
-        elif self.chartType == 'chart':
-            pass
+        elif self.chartType == 'bar':
+            self.generate_bar(f_gt)
         elif self.chartType == 'line':
             pass
         elif self.chartType == 'mix':

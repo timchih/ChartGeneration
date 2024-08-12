@@ -27,7 +27,7 @@ class Bar:
         self.max_val = center_val * (1 + val_range)
         self.is_random = is_random
 
-    def randBar(self, output_file_name, index=0, is_show=False, data=None):
+    def randSimpleBar(self, output_file_name, index=0, is_show=False, data=None):
         # Generate random data
         _, _, bar_labels, cate_labels, values, title, xlabel, ylabel = self.generateData(data)
         # ! only for simple bar chart
@@ -126,6 +126,11 @@ class Bar:
         # print(val_dict)
         result_dict = self.generateResult(title, xlabel, ylabel, output_file_name, val_dict, 'grouped bar')
         return result_dict
+    
+    def randBar(self, output_file_name, is_show=False):
+        if self.num_categories == 1:
+            return self.randSimpleBar(output_file_name)
+        return self.randStackBar(output_file_name) if random.randint(0, 1) == 0 else self.randGroupBar(output_file_name)
         
     def barFromDict(self, output_file_name, data, is_show=False):
         # get all data from dictionary
@@ -133,14 +138,12 @@ class Bar:
         # create list for all dicts created
         dict_list = []
         # there might be some reduncy in getting data again and again
-        dict_list.append(self.randGroupBar(output_file_name, is_show, data))
-        dict_list.append(self.randStackBar(output_file_name, is_show, data))
+        dict_list.append(self.randGroupBar(output_file_name+'0', is_show, data))
+        dict_list.append(self.randStackBar(output_file_name+'1', is_show, data))
         for i in range(num_categories):
-            dict_list.append(self.randBar(output_file_name, i, is_show, data))
+            dict_list.append(self.randSimpleBar(output_file_name+str(i+2), i, is_show, data))
 
         return dict_list
-
-
 
     def randLabelList(self, count):
         return [gh.generate_label(self.language, self.min_txt_len, self.max_txt_len, self.lang_dict) for _ in range(count)]
@@ -204,6 +207,6 @@ class Bar:
 
 if __name__ == "__main__":
     bar = Bar(gh.load_courp("dict/en_corpus.txt", ''))
-    # bar.randBar("something")
+    # bar.randSimpleBar("something")
     # bar.randStackBar('something')
     bar.randGroupBar("something")
