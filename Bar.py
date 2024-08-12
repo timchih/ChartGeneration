@@ -105,7 +105,6 @@ class Bar:
         pass
 
     def randLabelList(self, count):
-        # TODO: move this function to gh
         return [gh.generate_label(self.language, self.min_txt_len, self.max_txt_len, self.ch, self.en) for i in range(count)]
     
     def barToMarkdown(self, data):

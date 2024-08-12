@@ -7,101 +7,44 @@ from pylab import mpl
 mpl.rcParams["font.sans-serif"] = ["SimHei"]
 class Pie:
     def __init__(self, 
-                 ch_dict_path="dict/ch_news.txt",
-                 en_dict_path="dict/en_corpus.txt",
-                 min_slice=3,
-                 max_slice=8,
+                 langauge_dict,
+                 num_slices,
                  language='en',
                  min_txt_len=5,
                  max_txt_len=12,
                  is_random=True,
                  ):
-        self.ch = gh.load_courp(ch_dict_path, '')
-        self.en = gh.load_courp(en_dict_path, '')
-        self.min_slice = min_slice
-        self.max_slice = max_slice
+        self.lang_dict = langauge_dict
+        self.num_slices = num_slices
         self.language = language
         self.min_txt_len = min_txt_len
         self.max_txt_len = max_txt_len
         self.is_random = is_random
+        # assign random variables
+        self.colors = plt.cm.viridis(np.linspace(0,1,num_slices))
+        rand_bools = gh.random_bool(3)
+        self.with_legend = rand_bools[0]
+        self.with_rotate = rand_bools[1]
+        self.is_counter = rand_bools[2]
+        rand_colors = gh.randomcolors(2)
+        self.pie_color = rand_colors[0]
+        self.title_color = rand_colors[1]
 
-    def randPie(self, output_file_name, is_show=False):
-        # TODO: extract assignment(e.g. assign color, draw pie)
-        # TODO: combine randPie and pieFromDict
+    def createPie(self, output_file_name, is_show=False, data=None):
         # generate random data
-        num_slices, sizes, labels, title = self.generateData()
+        num_slices, sizes, labels, title = self.generateData(data)
 
-        # generate random bool/color
-        rand_bools = gh.random_bool(4)
-        colors = plt.cm.viridis(np.linspace(0,1,num_slices))
-        rand_colors = [gh.randomcolor() for _ in range(2)]
-        
-        _, ax1 = plt.subplots()
         size_display = [f"{size*100:{2}.{1}f}%" for size in sizes]
 
-        # ? randomly generate pie chart
-        if rand_bools[1]:
-            # ? 1. percentage outside, label as legend
-            wedges, texts = ax1.pie(sizes, labels=size_display, colors=colors,startangle=90, labeldistance=1.1, textprops={'fontsize': 8}, rotatelabels=rand_bools[2], counterclock=rand_bools[3], wedgeprops=
-       {'edgecolor':rand_colors[0]})
-            plt.subplots_adjust(left=0.1, right=0.6)
-            plt.legend(wedges, labels, loc="upper left", bbox_to_anchor=(1.0, 1.0))
-        else:
-            # ? 2. pencentage inside, label outside
-            ax1.pie(sizes, labels=labels, autopct='%1.1f%%', colors=colors,startangle=90, labeldistance=1.1, textprops={'fontsize': 8}, rotatelabels=rand_bools[2], counterclock=rand_bools[3], wedgeprops=
-       {'edgecolor':rand_colors[0]})
-        
-
-        
-        ax1.axis('equal')
-
-        plt.title(title, fontweight='bold', color=rand_colors[1])
-        plt.tight_layout()
+        # draw random components pie with given data
+        self.drawPie(sizes, labels, title)
         
         # show/save pie chart
         self.showOrSave(output_file_name, is_show)
 
         # generate result json
         result_dict = self.generateResult(title, dict(zip(labels, size_display)), output_file_name)
-        return result_dict
-    
-    def pieFromDict(self, output_file_name, data, is_show=False):
-        self.is_random = False # !!!!!! emmm 
-        num_slices, sizes, labels, title = self.generateData(data=data)
-
-        rand_bools = gh.random_bool(4)
-        colors = plt.cm.viridis(np.linspace(0,1,num_slices))
-        rand_colors = [gh.randomcolor() for i in range(2)]
-        
-        fig1, ax1 = plt.subplots()
-        size_display = [f"{size*100:{2}.{1}f}%" for size in sizes]
-
-        # ? randomly generate pie chart
-        if rand_bools[0]:
-            # ? 1. percentage outside, label as legend
-            wedges, texts = ax1.pie(sizes, labels=size_display, colors=colors,startangle=90, labeldistance=1.1, textprops={'fontsize': 8}, rotatelabels=rand_bools[1], counterclock=rand_bools[2], wedgeprops=
-       {'edgecolor':rand_colors[0]})
-            plt.subplots_adjust(left=0.1, right=0.6)
-            plt.legend(wedges, labels, loc="upper left", bbox_to_anchor=(1.0, 1.0))
-        else:
-            # ? 2. pencentage inside, label outside
-            ax1.pie(sizes, labels=labels, autopct='%1.1f%%', colors=colors,startangle=90, labeldistance=1.1, textprops={'fontsize': 8}, rotatelabels=rand_bools[1], counterclock=rand_bools[2], wedgeprops=
-       {'edgecolor':rand_colors[0]})
-        
-
-        
-        ax1.axis('equal')
-
-        # ? generate title
-        plt.title(title, fontweight='bold', color=rand_colors[1])
-        plt.tight_layout()
-        
-        # show/save pie chart
-        self.showOrSave(output_file_name, is_show)
-
-        # generate result json
-        result_dict = self.generateResult(title, dict(zip(labels, size_display)), output_file_name)
-        return result_dict
+        return result_dict 
     
     def generateResult(self, title, values, output_file_name):
         json_dict = {'title': title, 'x_title': 'None', 'y_title': 'None', 'values': values}
@@ -110,19 +53,18 @@ class Pie:
 
     def generateData(self, data=None):
         if self.is_random:
-            num_slices = np.random.randint(self.min_slice, self.max_slice)
-            labels = [gh.generate_label(self.language, self.min_txt_len, self.max_txt_len, self.ch, self.en) for i in range(num_slices)]
-            title = gh.generate_label(self.language, self.min_txt_len, self.max_txt_len, self.ch, self.en)
+            labels = [gh.generate_label(self.language, self.min_txt_len, self.max_txt_len, self.lang_dict) for i in range(self.num_slices)]
+            title = gh.generate_label(self.language, self.min_txt_len, self.max_txt_len, self.lang_dict)
         else:
             labels = list(data["labels"])
             title = data["title"]
-            num_slices = len(labels)
+            self.num_slices = len(labels)
             
-        sizes = np.random.rand(num_slices)
+        sizes = np.random.rand(self.num_slices)
         sizes = sizes / sizes.sum()
 
 
-        return num_slices, sizes, labels, title
+        return self.num_slices, sizes, labels, title
     
     def pieToMarkdown(self, data):
         markdown_table = f"# {data['title']}\n\n"
@@ -139,6 +81,27 @@ class Pie:
             plt.show()
         else:
             plt.savefig(output_file_name + '.png')
+
+        
+    def drawPie(self, sizes, labels, title):
+        _, ax1 = plt.subplots()
+        size_display = [f"{size*100:{2}.{1}f}%" for size in sizes]
+
+        if self.with_legend:
+            # ? 1. percentage outside, label as legend
+            wedges, texts = ax1.pie(sizes, labels=size_display, colors=self.colors,startangle=90, labeldistance=1.1, textprops={'fontsize': 8}, rotatelabels=self.with_rotate, counterclock=self.is_counter, wedgeprops=
+       {'edgecolor':self.pie_color})
+            plt.subplots_adjust(left=0.1, right=0.6)
+            plt.legend(wedges, labels, loc="upper left", bbox_to_anchor=(1.0, 1.0))
+        else:
+            # ? 2. pencentage inside, label outside
+            ax1.pie(sizes, labels=labels, autopct='%1.1f%%', colors=self.colors,startangle=90, labeldistance=1.1, textprops={'fontsize': 8}, rotatelabels=self.with_rotate, counterclock=self.is_counter, wedgeprops=
+       {'edgecolor':self.pie_color})
+            
+        ax1.axis('equal')
+
+        plt.title(title, fontweight='bold', color=self.title_color)
+        plt.tight_layout()
 
 if __name__ == "__main__":
     pie = Pie(language='ch')

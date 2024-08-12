@@ -7,16 +7,16 @@ def generate_text(txt_len, dict):
     txt = dict[random_star_idx:random_star_idx + txt_len]
     return list(txt)
 
-def generate_label(language, min_txt_len, max_txt_len, ch_dict, en_dict):
+def generate_label(language, min_txt_len, max_txt_len, lang_dict):
     if language == 'en':
         txt_len = random.randint(min_txt_len, max_txt_len)
-        out = generate_text(txt_len, en_dict)
+        out = generate_text(txt_len, lang_dict)
 
         if random.random() < 0.5:
             out[0] = out[0].upper()
     elif language == 'ch':
         txt_len = random.randint(min_txt_len, max_txt_len)
-        out = generate_text(txt_len, ch_dict)
+        out = generate_text(txt_len, lang_dict)
     return ''.join(out)
 
 def load_courp(p, join_c=''):
@@ -35,6 +35,9 @@ def randomcolor():
     colorArr = ['1','2','3','4','5','6','7','8','9','A','B','C','D','E','F']
     color ="#"+''.join([random.choice(colorArr) for i in range(6)])
     return color
+
+def randomcolors(i):
+    return [randomcolor() for _ in range(i)]
 
 def randomFileName(chartType, it, output_path):
     output_file_name = "".join(random.choices(string.ascii_uppercase + string.digits, k=20))
