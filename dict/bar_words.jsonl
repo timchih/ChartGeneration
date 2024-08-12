@@ -1,0 +1,10 @@
+{"title": "Monthly Sales by Region", "xlabel": "Region", "ylabel": "Sales (USD)", "category": ["North", "South", "East", "West"], "subcategory": ["January", "February", "March"]}
+{"title": "Annual Expenses by Department", "xlabel": "Department", "ylabel": "Expenses (USD)", "category": ["HR", "Finance", "IT", "Marketing"], "subcategory": ["2019", "2020", "2021"]}
+{"title": "Quarterly Revenue by Product", "xlabel": "Product", "ylabel": "Revenue (USD)", "category": ["Product A", "Product B", "Product C"], "subcategory": ["Q1", "Q2", "Q3", "Q4"]}
+{"title": "Daily Traffic by Source", "xlabel": "Source", "ylabel": "Traffic (Visits)", "category": ["Direct", "Referral", "Social Media"], "subcategory": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]}
+{"title": "Weekly Orders by Category", "xlabel": "Category", "ylabel": "Orders (Units)", "category": ["Electronics", "Clothing", "Books"], "subcategory": ["Week 1", "Week 2", "Week 3", "Week 4"]}
+{"title": "Yearly Profit by Branch", "xlabel": "Branch", "ylabel": "Profit (USD)", "category": ["Branch 1", "Branch 2", "Branch 3", "Branch 4"], "subcategory": ["2018", "2019", "2020", "2021", "2022"]}
+{"title": "Hourly Sales by Outlet", "xlabel": "Outlet", "ylabel": "Sales (USD)", "category": ["Outlet A", "Outlet B", "Outlet C"], "subcategory": ["09:00", "12:00", "15:00", "18:00", "21:00"]}
+{"title": "Monthly Visitors by Website", "xlabel": "Website", "ylabel": "Visitors (Count)", "category": ["Website 1", "Website 2", "Website 3"], "subcategory": ["January", "February", "March", "April", "May"]}
+{"title": "Quarterly Expenditure by Project", "xlabel": "Project", "ylabel": "Expenditure (USD)", "category": ["Project X", "Project Y", "Project Z"], "subcategory": ["Q1", "Q2", "Q3", "Q4"]}
+{"title": "Daily Production by Factory", "xlabel": "Factory", "ylabel": "Production (Units)", "category": ["Factory A", "Factory B", "Factory C"], "subcategory": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]}

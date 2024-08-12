@@ -9,3 +9,9 @@ Response:
     {"title": "Education level Distribution", "labels": ["High School", "Undergraduate", "Graduate"]}
     ...
 
+
+    '''
+    In [Chinese/English], can you generate 10 (title, category, subcategory) for bar chart in a jsonl file? The number of subcategory can 1,2,3,4,5...
+    please use utf-8 encoding
+    {"title": "", "xlabel": "", "ylabel": "", "category": ["", "", ..], "subcategory": ["", "", ...]}
+    '''

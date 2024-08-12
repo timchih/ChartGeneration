@@ -52,13 +52,13 @@ class Pie:
         return result_dict
 
     def generateData(self, data=None):
-        if self.is_random:
-            labels = [gh.generate_label(self.language, self.min_txt_len, self.max_txt_len, self.lang_dict) for i in range(self.num_slices)]
-            title = gh.generate_label(self.language, self.min_txt_len, self.max_txt_len, self.lang_dict)
-        else:
+        if not self.is_random and data != None:
             labels = list(data["labels"])
             title = data["title"]
             self.num_slices = len(labels)
+        else:
+            labels = [gh.generate_label(self.language, self.min_txt_len, self.max_txt_len, self.lang_dict) for i in range(self.num_slices)]
+            title = gh.generate_label(self.language, self.min_txt_len, self.max_txt_len, self.lang_dict)
             
         sizes = np.random.rand(self.num_slices)
         sizes = sizes / sizes.sum()
@@ -76,6 +76,7 @@ class Pie:
 
         return markdown_table
 
+    # save the image or show; just for easy debugging
     def showOrSave(self, output_file_name, is_show):
         if is_show:
             plt.show()

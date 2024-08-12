@@ -1,6 +1,7 @@
 #Ignore the following files
 dict/pie_words.jsonl
 deepseek.py
+test.py
 
 #ignore ALL files in ANY directory named
 __pycache__/
