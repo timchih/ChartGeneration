@@ -43,3 +43,8 @@ def randomFileName(chartType, it, output_path):
     output_file_name = "".join(random.choices(string.ascii_uppercase + string.digits, k=20))
     output_file_name = "{}_{}_{}".format(chartType, it, output_file_name)
     return os.path.join(output_path, output_file_name)
+
+# Function to randomly pick a choice using randint
+def random_pick(choices):
+    index = random.randint(0, len(choices) - 1)
+    return choices[index]

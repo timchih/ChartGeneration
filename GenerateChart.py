@@ -4,6 +4,7 @@ from Pie import Pie
 from Bar import Bar
 import json
 import numpy as np
+import generate_qa as gq
 
 from pylab import mpl
 # a font that includes chinese letters
@@ -12,6 +13,7 @@ mpl.rcParams["font.sans-serif"] = ["SimHei"]
 class GenerateChart:
     def __init__(self,
                  dict_path,
+                 generate_qa=False,
                  chartType='pie',
                  output_path='output/',
                  img_count=2,
@@ -31,6 +33,7 @@ class GenerateChart:
                  center_val=100,
                  ) -> None:
         # general variables
+        self.generate_qa = generate_qa
         self.chartType = chartType
         self.output_path = output_path
         self.is_random = is_random
@@ -59,7 +62,8 @@ class GenerateChart:
                 pie = self.assignPie()
                 result_dict = pie.createPie(output_full_path)
 
-                f_gt.write(json.dumps(result_dict, ensure_ascii=False) + '\n')
+                # f_gt.write(json.dumps(result_dict, ensure_ascii=False) + '\n')
+                self.post_process(f_gt, result_dict)
 
         else:
             with open(self.dict_path, 'r', encoding='utf-8') as file:
@@ -71,7 +75,8 @@ class GenerateChart:
                     result_dict = pie.createPie(output_full_path, data=data)
 
                     # write dictionary to json file
-                    f_gt.write(json.dumps(result_dict, ensure_ascii=False) + '\n')
+                    # f_gt.write(json.dumps(result_dict, ensure_ascii=False) + '\n')
+                    self.post_process(f_gt, result_dict)
 
     def assignPie(self):
         if self.language == 'en':
@@ -140,3 +145,9 @@ class GenerateChart:
             raise TypeError
 
         f_gt.close()
+
+    def post_process(self, f_gt, result_dict):
+        if self.generate_qa:
+            f_gt.write(json.dumps(gq.generate_qa(result_dict), ensure_ascii=False) + '\n')
+        else:
+            f_gt.write(json.dumps(result_dict, ensure_ascii=False) + '\n')

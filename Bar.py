@@ -49,7 +49,7 @@ class Bar:
         self.showOrSave(output_file_name, is_show)
 
         # create info dict from data
-        result_dict = self.generateResult(title, xlabel, ylabel, output_file_name, {category: dict(zip(bar_labels, values))}, 'simple bar')
+        result_dict = self.generateResult(title, xlabel, ylabel, output_file_name, {category: dict(zip(bar_labels, values))})
         # print(result_dict['markdown'])
         return result_dict
         
@@ -87,7 +87,7 @@ class Bar:
             val_dict[cate] = dict(zip(bar_labels, values[i]))
 
         # print(val_dict)
-        result_dict = self.generateResult(title, xlabel, ylabel, output_file_name, val_dict, 'stacked bar')
+        result_dict = self.generateResult(title, xlabel, ylabel, output_file_name, val_dict)
         return result_dict
 
     def randGroupBar(self, output_file_name, is_show=False, data=None):
@@ -124,7 +124,7 @@ class Bar:
             val_dict[cate] = dict(zip(bar_labels, values[i]))
 
         # print(val_dict)
-        result_dict = self.generateResult(title, xlabel, ylabel, output_file_name, val_dict, 'grouped bar')
+        result_dict = self.generateResult(title, xlabel, ylabel, output_file_name, val_dict)
         return result_dict
     
     def randBar(self, output_file_name, is_show=False):
@@ -172,9 +172,9 @@ class Bar:
 
         return "\n".join(markdown_tables)
 
-    def generateResult(self, title, xlabel, ylabel, output_file_name, values, typeBar):
+    def generateResult(self, title, xlabel, ylabel, output_file_name, values):
         json_dict = {'title': title, 'x_title': xlabel, 'y_title': ylabel, 'values': values}
-        result_dict = {'image': output_file_name + '.png', 'json' : json_dict, 'markdown' : self.barToMarkdown(json_dict), 'type': typeBar, 'source': 'Tim'}
+        result_dict = {'image': output_file_name + '.png', 'json' : json_dict, 'markdown' : self.barToMarkdown(json_dict), 'type': 'bar', 'source': 'Tim'}
         return result_dict
     
     def generateData(self, data=None):
@@ -207,6 +207,6 @@ class Bar:
 
 if __name__ == "__main__":
     bar = Bar(gh.load_courp("dict/en_corpus.txt", ''))
-    # bar.randSimpleBar("something")
+    bar.randSimpleBar("something", is_show=True)
     # bar.randStackBar('something')
-    bar.randGroupBar("something")
+    # bar.randGroupBar("something")
