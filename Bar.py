@@ -27,9 +27,9 @@ class Bar:
         self.max_val = center_val * (1 + val_range)
         self.is_random = is_random
 
-    def randSimpleBar(self, output_file_name, index=0, is_show=False, data=None):
+    def randSimpleBar(self, output_file_name, gen_data, index=0, is_show=False):
         # Generate random data
-        _, _, bar_labels, cate_labels, values, title, xlabel, ylabel = self.generateData(data)
+        _, _, bar_labels, cate_labels, values, title, xlabel, ylabel = gen_data
         # ! only for simple bar chart
         category = cate_labels[index]
         values = values[index]
@@ -54,9 +54,9 @@ class Bar:
         return result_dict
         
 
-    def randStackBar(self, output_file_name, is_show=False, data=None):
+    def randStackBar(self, output_file_name, gen_data, is_show=False):
         # Generate random data
-        num_bars, _, bar_labels, cate_labels, values, title, xlabel, ylabel = self.generateData(data)
+        num_bars, _, bar_labels, cate_labels, values, title, xlabel, ylabel = gen_data
 
         # Create the stacked bar chart
         _, ax = plt.subplots()
@@ -90,9 +90,9 @@ class Bar:
         result_dict = self.generateResult(title, xlabel, ylabel, output_file_name, val_dict)
         return result_dict
 
-    def randGroupBar(self, output_file_name, is_show=False, data=None):
+    def randGroupBar(self, output_file_name, gen_data, is_show=False):
         # generate random data
-        num_bars, num_categories, bar_labels, cate_labels, values, title, xlabel, ylabel = self.generateData(data)
+        num_bars, num_categories, bar_labels, cate_labels, values, title, xlabel, ylabel = gen_data
 
         # Set the width of the bars
         bar_width = 0.2
@@ -128,20 +128,23 @@ class Bar:
         return result_dict
     
     def randBar(self, output_file_name, is_show=False):
+        gen_data = self.generateData()
         if self.num_categories == 1:
-            return self.randSimpleBar(output_file_name)
-        return self.randStackBar(output_file_name) if random.randint(0, 1) == 0 else self.randGroupBar(output_file_name)
+            return self.randSimpleBar(output_file_name, gen_data, is_show=is_show)
+        return self.randStackBar(output_file_name, gen_data, is_show) if random.randint(0, 1) == 0 else self.randGroupBar(output_file_name, gen_data, is_show)
         
     def barFromDict(self, output_file_name, data, is_show=False):
         # get all data from dictionary
         num_categories = len(data["subcategory"])
+        # obtain data from data(dict)
+        gen_data = self.generateData(data)
         # create list for all dicts created
         dict_list = []
         # there might be some reduncy in getting data again and again
-        dict_list.append(self.randGroupBar(output_file_name+'0', is_show, data))
-        dict_list.append(self.randStackBar(output_file_name+'1', is_show, data))
+        dict_list.append(self.randGroupBar(output_file_name+'0', gen_data, is_show))
+        dict_list.append(self.randStackBar(output_file_name+'1', gen_data, is_show))
         for i in range(num_categories):
-            dict_list.append(self.randSimpleBar(output_file_name+str(i+2), i, is_show, data))
+            dict_list.append(self.randSimpleBar(output_file_name+str(i+2), gen_data, i, is_show))
 
         return dict_list
 
