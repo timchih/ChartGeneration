@@ -26,22 +26,28 @@ class Bar:
         self.min_val = center_val * val_range
         self.max_val = center_val * (1 + val_range)
         self.is_random = is_random
+        self.bar_colors = gh.randomcolors(num_bars)
+        rand_colors = gh.randomcolors(3)
+        self.title_color = rand_colors[0]
+        self.xlabel_color = rand_colors[1]
+        self.ylabel_color = rand_colors[2]
 
     def randSimpleBar(self, output_file_name, gen_data, index=0, is_show=False):
         # Generate random data
         _, _, bar_labels, cate_labels, values, title, xlabel, ylabel = gen_data
-        # ! only for simple bar chart
+        # only for simple bar chart
         category = cate_labels[index]
         values = values[index]
+        bar_color = self.bar_colors[index]
 
         # TODO: abstracted random function(e.g. color...)
         # Create a bar chart
         plt.figure(figsize=(10, 5))
-        plt.bar(bar_labels, values, color='blue') #? color
+        plt.bar(bar_labels, values, color=bar_color)
 
-        plt.xlabel(xlabel)
-        plt.ylabel(ylabel)
-        plt.title(title)
+        plt.xlabel(xlabel, color=self.xlabel_color)
+        plt.ylabel(ylabel, color=self.ylabel_color)
+        plt.title(title, fontweight='bold', color=self.title_color)
         plt.xticks(rotation=45, ha='right')
         plt.tight_layout()
 

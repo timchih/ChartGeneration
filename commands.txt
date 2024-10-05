@@ -1,0 +1,4 @@
+# generate bar chart with random words
+python generate_chart.py --dict_path='dict/test.jsonl' --chart_type='bar' --output_path='output/bar/' --img_count=2 --is_random
+# generate bar chart using the given dictionary
+python generate_chart.py --dict_path='dict/test.jsonl' --chart_type='bar' --output_path='output/bar/'
