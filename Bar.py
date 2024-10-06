@@ -146,7 +146,8 @@ class Bar:
         gen_data = self.generateData(data)
         # create list for all dicts created
         dict_list = []
-        # there might be some reduncy in getting data again and again
+        
+        # assign full slice to generating bar and group chart
         dict_list.append(self.randGroupBar(output_file_name+'0', gen_data, is_show))
         dict_list.append(self.randStackBar(output_file_name+'1', gen_data, is_show))
         for i in range(num_categories):

@@ -26,5 +26,19 @@ This is an example json of the information of the image
             "Thursday": {"Factory A": 72, "Factory B": 52, "Factory C": 94}, 
             "Friday": {"Factory A": 104, "Factory B": 60, "Factory C": 118}}}, 
     "markdown": "### Daily Production by Factory\n\n\n# Monday\n| Factory | Production (Units) |\n| --- | --- |\n| Factory A | 135 |\n| Factory B | 105 |\n| Factory C | 56 |\n\n# Tuesday\n| Factory | Production (Units) |\n| --- | --- |\n| Factory A | 124 |\n| Factory B | 72 |\n| Factory C | 51 |\n\n# Wednesday\n| Factory | Production (Units) |\n| --- | --- |\n| Factory A | 91 |\n| Factory B | 60 |\n| Factory C | 144 |\n\n# Thursday\n| Factory | Production (Units) |\n| --- | --- |\n| Factory A | 72 |\n| Factory B | 52 |\n| Factory C | 94 |\n\n# Friday\n| Factory | Production (Units) |\n| --- | --- |\n| Factory A | 104 |\n| Factory B | 60 |\n| Factory C | 118 |\n", 
-    "type": "bar"}
+    "type": "bar"
+}
+```
+
+## Generating Charts
+
+### Charts with meaningless words
+The texts are randomly generated from a dictionary. There are default dictionaries.
+
+You will be able to replace the dictionary with your own dictionary by adding a dixtionary(.txt) to `ch_dict_path` or `en_dict_path`.
+You can also indicate the language of the output image [chinese/english]
+Both the image and the jsonl file will be stored in `output/chart/` by default
+
+```bash
+python generate_chart.py --dict_path='dict/test.jsonl' --chart_type='bar' --output_path='output/bar/' --img_count=2 --is_random
 ```

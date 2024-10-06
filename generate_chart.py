@@ -1,7 +1,6 @@
 import argparse
 from GenerateChart import GenerateChart
 
-# TODO: argument parsing
 def parse_args():
     parser = argparse.ArgumentParser()
     # input path
@@ -30,8 +29,8 @@ def parse_args():
     
     # ! bar chart setting
     # max/min number of bars
-    parser.add_argument('--min_bars', type=int, default=3)
-    parser.add_argument('--max_bars', type=int, default=10)
+    parser.add_argument('--min_subcate', type=int, default=3)
+    parser.add_argument('--max_subcate', type=int, default=10)
     # max/min number of categories
     parser.add_argument('--min_categories', type=int, default=1)
     parser.add_argument('--max_categories', type=int, default=4)

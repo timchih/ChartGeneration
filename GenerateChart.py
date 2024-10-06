@@ -2,6 +2,7 @@ import generation_helper as gh
 import os
 from Pie import Pie
 from Bar import Bar
+from Line import Line
 import json
 import numpy as np
 import generate_qa as gq
@@ -25,8 +26,8 @@ class GenerateChart:
                  language='en',
                  min_slice=3,
                  max_slice=8,
-                 min_bars=3,
-                 max_bars=10,
+                 min_subcate=3,
+                 max_subcate=10,
                  min_categories=1,
                  max_categories=4,
                  val_range=0.5,
@@ -48,8 +49,8 @@ class GenerateChart:
         self.min_slice = min_slice
         self.max_slice = max_slice
         # bar variables
-        self.min_bars = min_bars
-        self.max_bars = max_bars
+        self.min_subcate = min_subcate
+        self.max_subcate = max_subcate
         self.min_categories = min_categories
         self.max_categories = max_categories
         self.val_range = val_range
@@ -116,10 +117,47 @@ class GenerateChart:
             lang_dict = self.en
         else:
             lang_dict = self.ch
-        num_bars = np.random.randint(self.min_bars, self.max_bars)
+        num_bars = np.random.randint(self.min_subcate, self.max_subcate)
         num_categories = np.random.randint(self.min_categories, self.max_categories)
         return Bar(lang_dict,
                    num_bars,
+                   num_categories,
+                   self.language,
+                   self.min_txt_len,
+                   self.max_txt_len,
+                   self.val_range,
+                   self.center_val,
+                   self.is_random)
+
+    def generate_line(self, f_gt):
+        if self.is_random:
+            for i in range(self.img_count):
+                output_full_path = gh.randomFileName(self.chartType, i, self.output_path)
+                line = self.assignLine()
+                result_dict = line.randLine(output_full_path)
+
+                f_gt.write(json.dumps(result_dict, ensure_ascii=False) + '\n')
+        else:
+            with open(self.dict_path, 'r', encoding='utf-8') as file:
+                for i, line in enumerate(file):
+                    output_full_path = gh.randomFileName(self.chartType, i, self.output_path)
+                    data = json.loads(line)
+                    # generate chart and save results
+                    line = self.assignLine()
+                    result_dict = line.lineFromDict(output_full_path, data=data)
+
+                    # write dictionary to json file
+                    f_gt.write(json.dumps(result_dict, ensure_ascii=False) + '\n')
+
+    def assignLine(self):
+        if self.language == 'en':
+            lang_dict = self.en
+        else:
+            lang_dict = self.ch
+        num_lines = np.random.randint(self.min_subcate, self.max_subcate)
+        num_categories = np.random.randint(self.min_categories, self.max_categories)
+        return Line(lang_dict,
+                   num_lines,
                    num_categories,
                    self.language,
                    self.min_txt_len,
@@ -138,7 +176,7 @@ class GenerateChart:
         elif self.chartType == 'bar':
             self.generate_bar(f_gt)
         elif self.chartType == 'line':
-            pass
+            self.generate_line(f_gt)
         elif self.chartType == 'mix':
             pass
         else:
