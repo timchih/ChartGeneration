@@ -177,8 +177,10 @@ class GenerateChart:
             self.generate_bar(f_gt)
         elif self.chartType == 'line':
             self.generate_line(f_gt)
-        elif self.chartType == 'mix':
-            pass
+        # elif self.chartType == 'mix':
+        #     # TODO: mixed bar and line chart mode
+        #     pass
+        # TODO: mode for generating all kinds of charts at the same time
         else:
             raise TypeError
 

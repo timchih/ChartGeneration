@@ -114,4 +114,3 @@ In [Chinese/English], can you generate [10] (title, category, subcategory) for b
     please use utf-8 encoding
     {"title": "", "xlabel": "", "ylabel": "", "category": ["", "", ..], "subcategory": ["", "", ...]}
 ```
-
