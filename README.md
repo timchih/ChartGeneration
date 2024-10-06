@@ -4,12 +4,12 @@ Generation of Chart(pie/bar/line) image and corresponding information(int json) 
 
 Allows for two different type of generation:
 1. chart with random(no-meaning) words
-2. chart with meaningful words
+2. chart with given(meaningful) words
 
 |Type|Example|
 |---|---|
-|Meaningless Words|![](img/random_words.PNG)|
-|Meaningful Words|![](img/meaningful_words.PNG)|
+|Random Texts|![](img/random_words.PNG)|
+|Given(Meaningful) Words|![](img/meaningful_words.PNG)|
 
 This is an example json of the information of the image
 ```json
@@ -39,7 +39,8 @@ You will be able to replace the dictionary with your own dictionary by adding a 
 You can also indicate the language of the output image [chinese/english]
 Both the image and the jsonl file will be stored in `output/chart/` by default
 
-Example of generating 2 random bar chart at output/bar/
+Run the following command to generate 2 random bar chart at output/bar/
+When `ch_dict_path/en_dict_path` are not specified, the program will use the default word dictionary in the `dict/` folder
 ```bash
 # generating 2 random bar chart
 python generate_chart.py --chart_type='bar' --output_path='output/bar/' --img_count=2 --is_random
@@ -60,12 +61,16 @@ General settings:
 --chart_type     # specifies the desired chart type
 --img_count      # number of charts generated
 --language       # specifies the language of the text
+```
 
-# pie chart specific
+Pie chart specific settings:
+```bash
 --max_slice      # maximum number of slices of pie chart
 --min_slice      # minimum number of slices of pie chart
+```
 
-# bar/line specific
+Bar/Line chart specific settings:
+```bash
 --min_subcate    # minimum number of sub-categories
 --max_subcate    # maximum number of sub-categories
 --min_categories # minimum number of categories
@@ -73,3 +78,33 @@ General settings:
 --val_range      # the range of values e.g. val_range=0.5, then the value will be within the range (50%, 150%)
 --center_val     # the center value of the range
 ```
+
+### Charts with Given texts
+Given a dictionary of texts on the chart, the program will be able to generate chart image and corresponding information with the given text
+
+Dictionary of texts:
+```json
+{
+    "title": "Daily Production by Factory", 
+    "xlabel": "Factory", 
+    "ylabel": "Production (Units)", 
+    "category": ["Factory A", "Factory B", "Factory C"], 
+    "subcategory": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
+}
+```
+
+Run the following command to generate results from the given text dictionary
+```bash
+python generate_chart.py --dict_path='dict/test.jsonl' --chart_type='bar' --output_path='output/bar/'
+```
+
+Larger examples("dict/bar_words.jsonl" and "dict/pie_words.jsonl") of Dictionary of texts are included under the `dict/` folder
+
+You can generate loads of these Dictionary of texts through call generative AIs
+You can run the following prompt
+```
+In [Chinese/English], can you generate [10] (title, category, subcategory) for bar chart in a jsonl file? The number of subcategory can 1,2,3,4,5...
+    please use utf-8 encoding
+    {"title": "", "xlabel": "", "ylabel": "", "category": ["", "", ..], "subcategory": ["", "", ...]}
+```
+
