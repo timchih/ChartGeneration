@@ -46,30 +46,31 @@ When `ch_dict_path/en_dict_path` are not specified, the program will use the def
 python generate_chart.py --chart_type='bar' --output_path='output/bar/' --img_count=2 --is_random
 ```
 
-Random mode specific parameter settings:
+#### Random mode specific parameter settings:
 ```bash
 --is_random    # random texts mode
 --min_txt_len  # minimum length of the text
 --max_txt_len  # maximum length of the text
-```
-
-General settings:
-```bash
---output_path    # output file location
---ch_dict_path   # texts dictionary path (for generating random chinese texts)
---en_dict_path   # texts dictionary path (for generating random english texts)
---chart_type     # specifies the desired chart type
 --img_count      # number of charts generated
 --language       # specifies the language of the text
+--ch_dict_path   # texts dictionary path (for generating random chinese texts)
+--en_dict_path   # texts dictionary path (for generating random english texts)
 ```
 
-Pie chart specific settings:
+#### General settings:
+```bash
+--output_path    # output file location
+--chart_type     # specifies the desired chart type
+
+```
+
+#### Pie chart specific settings:
 ```bash
 --max_slice      # maximum number of slices of pie chart
 --min_slice      # minimum number of slices of pie chart
 ```
 
-Bar/Line chart specific settings:
+#### Bar/Line chart specific settings:
 ```bash
 --min_subcate    # minimum number of sub-categories
 --max_subcate    # maximum number of sub-categories
@@ -94,8 +95,14 @@ Dictionary of texts:
 ```
 
 Run the following command to generate results from the given text dictionary
+To use this mode, simply not include the --is_random in the command
 ```bash
 python generate_chart.py --dict_path='dict/test.jsonl' --chart_type='bar' --output_path='output/bar/'
+```
+
+Chart from text Dictionary specific settings:
+```bash
+--dict_path  # dictionary of texts of charts
 ```
 
 Larger examples("dict/bar_words.jsonl" and "dict/pie_words.jsonl") of Dictionary of texts are included under the `dict/` folder
