@@ -32,13 +32,44 @@ This is an example json of the information of the image
 
 ## Generating Charts
 
-### Charts with meaningless words
+### Charts with random texts
 The texts are randomly generated from a dictionary. There are default dictionaries.
 
 You will be able to replace the dictionary with your own dictionary by adding a dixtionary(.txt) to `ch_dict_path` or `en_dict_path`.
 You can also indicate the language of the output image [chinese/english]
 Both the image and the jsonl file will be stored in `output/chart/` by default
 
+Example of generating 2 random bar chart at output/bar/
 ```bash
-python generate_chart.py --dict_path='dict/test.jsonl' --chart_type='bar' --output_path='output/bar/' --img_count=2 --is_random
+# generating 2 random bar chart
+python generate_chart.py --chart_type='bar' --output_path='output/bar/' --img_count=2 --is_random
+```
+
+Random mode specific parameter settings:
+```bash
+--is_random    # random texts mode
+--min_txt_len  # minimum length of the text
+--max_txt_len  # maximum length of the text
+```
+
+General settings:
+```bash
+--output_path    # output file location
+--ch_dict_path   # texts dictionary path (for generating random chinese texts)
+--en_dict_path   # texts dictionary path (for generating random english texts)
+--chart_type     # specifies the desired chart type
+--img_count      # number of charts generated
+--language       # specifies the language of the text
+
+# pie chart specific
+--max_slice      # maximum number of slices of pie chart
+--min_slice      # minimum number of slices of pie chart
+
+# bar/line specific
+--min_subcate    # minimum number of sub-categories
+--max_subcate    # maximum number of sub-categories
+--min_categories # minimum number of categories
+--max_categories # maximum number of categories
+--val_range      # the range of values e.g. val_range=0.5, then the value will be within the range (50%, 150%)
+--center_val     # the center value of the range
 ```
